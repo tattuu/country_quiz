@@ -1,46 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import 'package:country_quiz/converter_route.dart';
-import 'package:country_quiz/unit.dart';
+import 'package:country_quiz/detail_of_country.dart';
 
 final _rowHeight = 95.0; // 1行の高さ
-//final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
 class CreateOneCountryColumn extends StatelessWidget {
 
   final String name;
   final Color color;
   final String flagImagePath;
-  final List<Unit> units;
 
   const CreateOneCountryColumn({
     Key key,
     @required this.name,
     @required this.color,
     @required this.flagImagePath,
-    @required this.units,
+//    @required this.units,
   }) : assert(name != null),
        assert(color != null),
        assert(flagImagePath != null),
-       assert(units != null),
        super(key: key);
 
-  void _navigateToConverter(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute<Null>(
-      builder: (BuildContext context) {
-        return Scaffold(
-          body: ConverterRoute(
-            color: color,
-            name: name,
-            units: units,
-          ),
-        );
-      },
-    ));
-  }
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -58,10 +39,10 @@ class CreateOneCountryColumn extends StatelessWidget {
         height: _rowHeight,
         child: InkWell(
 //          borderRadius: _borderRadius,
-          highlightColor: color,
-          splashColor: color,
+//          highlightColor: color,
+//          splashColor: color,
 
-          onTap: () => _navigateToConverter(context),
+//          onTap: () => _navigateToConverter(context),
 
           child: Padding(
             padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
@@ -74,9 +55,18 @@ class CreateOneCountryColumn extends StatelessWidget {
 //                    height: 100.0,
                     width: 130.0,
                     alignment: Alignment.center,
-                    child: Image.asset(
-                      '$flagImagePath',
-                      fit: BoxFit.contain,
+                    child: GestureDetector(
+                      child: Hero(
+                        tag: name,
+                        child: Image.asset(
+                          flagImagePath,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) {
+                          return DetailOfCountry(name, flagImagePath);
+                        }));
+                      },
                     ),
                   ),
                 ),
@@ -102,3 +92,4 @@ class CreateOneCountryColumn extends StatelessWidget {
     );
   }
 }
+

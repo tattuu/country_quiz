@@ -37,14 +37,14 @@ class _CountryListState extends State<CountryList> {
         throw('data got is not a Map');
       }
       final List<Unit> units =
-      data[key].map<Unit>((dynamic data) => Unit.fromJson(data)).toList();
+        data[key].map<Unit>((dynamic data) => Unit.fromJson(data)).toList();
 
       units.forEach((Unit unit) {
         var countryList = CreateOneCountryColumn(
           name: unit.name,
           color: Colors.grey[100],
           flagImagePath: unit.flagPath,
-          units: units,
+//          units: units,
         );
 
         setState(() {
@@ -65,7 +65,7 @@ class _CountryListState extends State<CountryList> {
   Widget build(BuildContext context) {
 
     final listView = Container(
-      padding: EdgeInsets.only(left: 4.0, right: 4.0),
+      padding: EdgeInsets.only(top: 4.0, left: 4.0, right: 4.0),
       color: Colors.grey[50],
       child: _buildCategoryWidgets(_categories),
     );
