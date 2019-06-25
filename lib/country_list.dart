@@ -42,7 +42,7 @@ class _CountryListState extends State<CountryList> {
       units.forEach((Unit unit) {
         var countryList = CreateOneCountryColumn(
           name: unit.name,
-          color: Colors.deepOrange,
+          color: Colors.grey[100],
           flagImagePath: unit.flagPath,
           units: units,
         );
@@ -65,8 +65,8 @@ class _CountryListState extends State<CountryList> {
   Widget build(BuildContext context) {
 
     final listView = Container(
-      color: Colors.white,
-      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      padding: EdgeInsets.only(left: 4.0, right: 4.0),
+      color: Colors.grey[50],
       child: _buildCategoryWidgets(_categories),
     );
 

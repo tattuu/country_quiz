@@ -4,13 +4,13 @@ import 'package:meta/meta.dart';
 import 'package:country_quiz/converter_route.dart';
 import 'package:country_quiz/unit.dart';
 
-final _rowHeight = 100.0; // 1行の高さ
+final _rowHeight = 95.0; // 1行の高さ
 //final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
 class CreateOneCountryColumn extends StatelessWidget {
 
   final String name;
-  final ColorSwatch color;
+  final Color color;
   final String flagImagePath;
   final List<Unit> units;
 
@@ -43,24 +43,33 @@ class CreateOneCountryColumn extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(47.5),
+          bottomRight: Radius.circular(47.5),
+          topLeft: Radius.circular(10.0),
+          bottomLeft: Radius.circular(10.0),
+        )
+      ),
+      color: Color(0x9FFFFFFF),
+//      color: Colors.cyan,
       child: Container(
         height: _rowHeight,
         child: InkWell(
 //          borderRadius: _borderRadius,
           highlightColor: color,
-          splashColor: Colors.orangeAccent,
+          splashColor: color,
 
           onTap: () => _navigateToConverter(context),
 
           child: Padding(
-            padding: EdgeInsets.all(1.0),
+            padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(2.0),
+                  padding: EdgeInsets.only(left: 6.0, right: 3.0),
                   child: Container(
 //                    height: 100.0,
                     width: 130.0,
@@ -77,7 +86,11 @@ class CreateOneCountryColumn extends StatelessWidget {
                     child: Text(
                       name,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headline,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
