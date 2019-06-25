@@ -1,0 +1,58 @@
+{
+  "Country": [
+    {
+      "jp_name": "アフガニスタン",
+      "en_name": "Afghanistan",
+      "flag_path": "assets/countries/flags/Afghanistan.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アルバニア",
+      "en_name": "Albania",
+      "flag_path": "assets/countries/flags/Albania.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アルジェリア",
+      "en_name": "Algeria",
+      "flag_path": "assets/countries/flags/Algeria.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アンドラ",
+      "en_name": "Andorra",
+      "flag_path": "assets/countries/flags/Andorra.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アンゴラ",
+      "en_name": "Angola",
+      "flag_path": "assets/countries/flags/Angola.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アルゼンチン",
+      "en_name": "Argentina",
+      "flag_path": "assets/countries/flags/Argentina.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "アルメニア",
+      "en_name": "Armenia",
+      "flag_path": "assets/countries/flags/Armenia.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "オーストラリア",
+      "en_name": "Australia",
+      "flag_path": "assets/countries/flags/Armenia.svg.png",
+      "land_form_path": "a"
+    },
+    {
+      "jp_name": "オーストリア",
+      "en_name": "Austria",
+      "flag_path": "assets/countries/flags/Austria.svg.png",
+      "land_form_path": "a"
+    }
+  ]
+}
