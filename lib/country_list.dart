@@ -71,6 +71,36 @@ class _CountryListState extends State<CountryList> {
     );
 
     return Scaffold(
+      floatingActionButton: Column(
+        verticalDirection: VerticalDirection.up,
+        children: <Widget>[
+          FloatingActionButton(
+            heroTag: null,
+            backgroundColor: Colors.pink,
+            child: Icon(
+              Icons.chevron_left,
+              size: 45,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          Container(
+            margin: EdgeInsets.only(bottom: 15.0),
+            child: FloatingActionButton(
+              heroTag: null,
+              backgroundColor: Colors.pink,
+              child: Icon(
+                Icons.search,
+                size: 34,
+              ),
+              onPressed: () {
+                print('a');
+              },
+            ),
+          ),
+        ],
+      ),
       body: listView,
     );
   }
