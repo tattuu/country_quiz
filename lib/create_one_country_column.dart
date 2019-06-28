@@ -37,55 +37,45 @@ class CreateOneCountryColumn extends StatelessWidget {
 //      color: Colors.cyan,
       child: Container(
         height: _rowHeight,
-        child: InkWell(
-//          borderRadius: _borderRadius,
-//          highlightColor: color,
-//          splashColor: color,
-
-//          onTap: () => _navigateToConverter(context),
-
-          child: Padding(
-            padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 6.0, right: 3.0),
-                  child: Container(
+        child: Padding(
+          padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 6.0, right: 3.0),
+                child: Container(
 //                    height: 100.0,
-                    width: 130.0,
-                    alignment: Alignment.center,
-                    child: GestureDetector(
-                      child: Hero(
-                        tag: name,
-                        child: Image.asset(
-                          flagImagePath,
-                        ),
+                  width: 130.0,
+                  alignment: Alignment.center,
+                  child: GestureDetector(
+                    child: Hero(
+                      tag: name,
+                      child: Image.asset(
+                        flagImagePath,
                       ),
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (_) {
-                          return DetailOfCountry(name, flagImagePath);
-                        }));
-                      },
+                    ),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => DetailOfCountry(name, flagImagePath))),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Center(
+                  child: Text(
+                    name,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 10.0),
-                  child: Center(
-                    child: Text(
-                      name,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

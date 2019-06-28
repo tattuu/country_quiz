@@ -19,14 +19,12 @@ class TopPage extends StatelessWidget { // トップページに関するウィ�
         height: 150,
         width: 150,
         color: Colors.tealAccent[700],
-        child: FlatButton(
-          onPressed: () => _navigateToConverter(context), // アイコンをクリックした場合の処理
-          child: Center(
-            child: Icon(
-              icon,
-              color: Colors.white,
-              size: 80,
-            ),
+        child: Center(
+          child: IconButton(
+            icon: Icon(icon),
+            color: Colors.white,
+            iconSize: 80,
+            onPressed: () => _navigateToConverter(context), // アイコンをクリックした場合の処理
           ),
         ),
       ),
