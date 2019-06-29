@@ -116,7 +116,12 @@ class _CountryListState extends State<CountryList> {
                 for (var i = 0; i < continentTag.length; i++){
                     _tagColor[i][continentTag[i]] = [Colors.black, Colors.white];
                 }
-                _listTileSet = Text('Search...');
+                _listTileSet = Text(
+                  'Search...',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                );
                 searchResults.clear();
                 showDialog(
                   context: context,
@@ -180,7 +185,10 @@ class _CountryListState extends State<CountryList> {
                 titlePadding: EdgeInsets.only(top: 1.0),
                 searchCursorColor: Colors.pink,
                 searchInputDecoration: InputDecoration(
-                    hintText: 'Search...'
+                  hintText: 'Search...',
+//                  hintStyle: TextStyle(
+//                    fontWeight: FontWeight.bold,
+//                  ),
                 ),
                 isSearchable: true,
 //                  title: Text('国を検索して下さい'),
@@ -211,8 +219,17 @@ class _CountryListState extends State<CountryList> {
         //      SizedBox(width: 8.0),
         Flexible(
           child: Container(
-            padding: EdgeInsets.only(bottom: 2.0),
-            child: Text(country.jpName),
+//            padding: EdgeInsets.only(bottom: 3.0),
+            child: Text(
+              country.jpName,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.black54,
+              ),
+            ),
           ),
         ),
       ],
@@ -221,7 +238,7 @@ class _CountryListState extends State<CountryList> {
   Widget _cardSearch () {
 
     return SizedBox(
-      height: 65.0,
+//      height: 45.0,
       child: Card(
         elevation: 3.0,
         color: Colors.grey[300],
@@ -251,7 +268,12 @@ class _CountryListState extends State<CountryList> {
           onTap: () {
 
             setState(() {
-              _listTileSet = Text('Search...');
+              _listTileSet = Text(
+                'Search...',
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              );
             });
 
             final matchCountry = searchResults.where((searchResult) => searchResult == _selectedDialogCountry.jpName);

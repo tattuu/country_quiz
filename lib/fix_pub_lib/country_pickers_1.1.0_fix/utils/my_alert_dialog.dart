@@ -153,6 +153,9 @@ class MyAlertDialog<T> extends StatelessWidget {
       dialogChild =
           new Semantics(namesRoute: true, label: label, child: dialogChild);
 
-    return new Dialog(child: dialogChild);
+    return new Dialog(
+      backgroundColor: Colors.grey[300],
+      child: dialogChild,
+    );
   }
 }

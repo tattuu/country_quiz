@@ -22,8 +22,8 @@ class CountryPickerUtils {
   static Widget getDefaultFlagImage(Country country) {
     return Image.asset(
       CountryPickerUtils.getFlagImageAssetPath(country.isoCode),
-      height: 20.0,
-      width: 30.0,
+      height: 30.0,
+      width: 50.0,
       fit: BoxFit.contain,
     );
   }
