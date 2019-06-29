@@ -26,13 +26,14 @@ class CreateOneCountryColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topRight: Radius.circular(47.5),
-          bottomRight: Radius.circular(47.5),
-          topLeft: Radius.circular(10.0),
-          bottomLeft: Radius.circular(10.0),
-        )
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(47.5),
+            bottomRight: Radius.circular(47.5),
+            topLeft: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
+          )
       ),
+      elevation: 2.0,
       color: Color(0x9FFFFFFF),
 //      color: Colors.cyan,
       child: Container(

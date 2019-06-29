@@ -2,7 +2,6 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/countries.dar
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 
 class CountryPickerUtils {
@@ -29,14 +28,14 @@ class CountryPickerUtils {
     );
   }
 
-  static Country getCountryByPhoneCode(String phoneCode) {
-    try {
-      return countryList.firstWhere(
-        (country) => country.phoneCode.toLowerCase() == phoneCode.toLowerCase(),
-      );
-    } catch (error) {
-      throw Exception(
-          "The initialValue provided is not a supported phone code!");
-    }
-  }
+//  static Country getCountryByPhoneCode(String phoneCode) {
+//    try {
+//      return countryList.firstWhere(
+//        (country) => country.phoneCode.toLowerCase() == phoneCode.toLowerCase(),
+//      );
+//    } catch (error) {
+//      throw Exception(
+//          "The initialValue provided is not a supported phone code!");
+//    }
+//  }
 }

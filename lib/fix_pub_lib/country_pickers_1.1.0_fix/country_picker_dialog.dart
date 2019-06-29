@@ -83,7 +83,7 @@ class CountryPickerDialog extends StatefulWidget {
     this.onValuePicked,
     this.title,
     this.titlePadding,
-    this.contentPadding = const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0),
+    this.contentPadding = const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
     this.semanticLabel,
     this.itemFilter,
     this.itemBuilder,
@@ -110,9 +110,8 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
 
   @override
   void initState() {
-    _allCountries = countryList
-        .where(widget.itemFilter ?? acceptAllCountries)
-        .toList();
+    _allCountries =
+        countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
 
     _filteredCountries = _allCountries;
 
@@ -139,7 +138,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
                 .map((item) => SimpleDialogOption(
                       child: widget.itemBuilder != null
                           ? widget.itemBuilder(item)
-                          : Text(item.name),
+                          : Text(item.jpName),
                       onPressed: () {
                         widget.onValuePicked(item);
                         Navigator.pop(context);
@@ -149,7 +148,8 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
           )
         : widget.searchEmptyView ??
             Center(
-              child: Text('No country found.'),
+//              child: Text('No country found.'),
+              child: Text('該当する国がありません'),
             );
   }
 
@@ -175,6 +175,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
 
   _buildSearchField() {
     return TextField(
+      autofocus: true,
       cursorColor: widget.searchCursorColor,
       decoration:
           widget.searchInputDecoration ?? InputDecoration(hintText: 'Search'),
@@ -183,11 +184,18 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
           _filteredCountries = _allCountries
               .where((Country country) =>
                   country.name.toLowerCase().startsWith(value.toLowerCase()) ||
-                  country.phoneCode.startsWith(value) ||
-                  country.isoCode.toLowerCase().startsWith(value.toLowerCase()))
+                  //                  country.phoneCode.startsWith(value) ||
+                  //                  country.isoCode.toLowerCase().startsWith(value.toLowerCase()) ||
+                  country.jpName.startsWith(value) ||
+                  country.jpName.startsWith(_kanaConvert(value)))
               .toList();
         });
       },
     );
+  }
+
+  String _kanaConvert(String str) {
+    return str.replaceAllMapped(RegExp("[ぁ-ゔ]"),
+        (Match m) => String.fromCharCode(m.group(0).codeUnitAt(0) + 0x60));
   }
 }
