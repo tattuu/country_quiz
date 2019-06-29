@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'dart:convert';
-
 import 'package:country_quiz/create_one_country_column.dart';
-import 'package:country_quiz/unit.dart';
+//import 'package:country_quiz/unit.dart';
 
+import 'package:unicorndial/unicorndial.dart';
+
+import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/countries.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country_picker_dialog.dart';
+import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/typedefs.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
 
 class CountryList extends StatefulWidget {
@@ -32,6 +34,15 @@ class _CountryListState extends State<CountryList> {
 
   final _categories = <CreateOneCountryColumn>[];
 
+  var countryFlagNames = <Country>[];
+
+  @override
+  void initState() {
+    countryFlagNames = countryList.where(acceptAllCountries).toList();
+
+    super.initState();
+  }
+
   @override
   Future<void> didChangeDependencies() async {
     super.didChangeDependencies();
@@ -42,22 +53,30 @@ class _CountryListState extends State<CountryList> {
   }
 
   Future<void> _retrieveCountryList() async {
-    final json = DefaultAssetBundle.of(context).loadString(
-        'assets/json/country_list.json');
-    final data = JsonDecoder().convert(await json);
+//    final json = DefaultAssetBundle.of(context).loadString(
+//        'assets/json/country_list.json');
+//    final data = JsonDecoder().convert(await json);
+//
+//    data.keys.forEach((key) {
+//      if (data is! Map) {
+//        throw('data got is not a Map');
+//      }
+//      final List<Unit> units =
+//      data[key].map<Unit>((dynamic data) => Unit.fromJson(data)).toList();
 
-    data.keys.forEach((key) {
-      if (data is! Map) {
-        throw('data got is not a Map');
-      }
-      final List<Unit> units =
-      data[key].map<Unit>((dynamic data) => Unit.fromJson(data)).toList();
+//      units.forEach((Unit unit) {
+//        var countryList = CreateOneCountryColumn(
+//          name: unit.name,
+//          color: Colors.grey[100],
+//          flagImagePath: unit.flagPath,
+////          units: units,
+//        );
 
-      units.forEach((Unit unit) {
+    countryFlagNames.forEach((countryFlagName) {
         var countryList = CreateOneCountryColumn(
-          name: unit.name,
+          name: countryFlagName.jpName,
           color: Colors.grey[100],
-          flagImagePath: unit.flagPath,
+          flagImagePath: CountryPickerUtils.getFlagImageAssetPath(countryFlagName.isoCode),
 //          units: units,
         );
 
@@ -65,8 +84,7 @@ class _CountryListState extends State<CountryList> {
           _categories.add(countryList);
         });
       });
-    });
-  }
+    }
 
   Widget _buildCategoryWidgets(List<Widget> categories) {
     return ListView.builder(
@@ -163,9 +181,34 @@ class _CountryListState extends State<CountryList> {
                     print('finish');
                     print(searchResults);
                     if(searchResults.length != 0) {
-                      Navigator.pop(context);
+                      setState(() {
+
+                        _categories.clear();
+                        countryFlagNames.clear();
+
+                        var continentHit = [];
+
+                        countryFlagNames = countryList.where((country) =>
+                        searchResults.indexOf(country.jpName) > -1).toList();
+
+                        if (countryFlagNames.length == 0) {
+
+                          countryList.forEach((country) =>
+                              continentHit.add(country.continents.where((countryContinent) =>
+                              searchResults.indexOf(countryContinent) > -1).toList()));
+
+                          for(var i = 0; i < continentHit.length; i++) {
+                            if (continentHit[i].length != 0){
+                              countryFlagNames.add(countryList[i]);
+                            }
+                          }
+                        }
+
+                          _retrieveCountryList();
+                        Navigator.pop(context);
+                      });
                     }
-                  },
+                  }
                 ),
               ],
             ),
@@ -174,6 +217,7 @@ class _CountryListState extends State<CountryList> {
       ],
     );
   }
+
 
   Future<void> _openCountryPickerDialog() async =>
       await showDialog(

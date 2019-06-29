@@ -87,7 +87,8 @@ final List<Country> countryList = [
     iso3Code: "ASM",
   ),
   Country(
-    continents: [""], isoCode: "AT",
+    continents: ["オセアニア"],
+    isoCode: "AT",
     phoneCode: "43",
     name: "Austria",
     jpName: "オーストリア",
@@ -318,7 +319,8 @@ final List<Country> countryList = [
     iso3Code: "CIV",
   ),
   Country(
-    continents: [""], isoCode: "CK",
+    continents: ["オセアニア"],
+    isoCode: "CK",
     phoneCode: "682",
     name: "Cook Islands",
     jpName: "クック諸島",
@@ -500,7 +502,8 @@ final List<Country> countryList = [
     iso3Code: "FIN",
   ),
   Country(
-    continents: [""], isoCode: "FJ",
+    continents: ["オセアニア"],
+    isoCode: "FJ",
     phoneCode: "679",
     name: "Fiji",
     jpName: "フィジー",
@@ -829,7 +832,8 @@ final List<Country> countryList = [
     iso3Code: "JOR",
   ),
   Country(
-    continents: [""], isoCode: "JP",
+    continents: ["アジア"],
+    isoCode: "JP",
     phoneCode: "81",
     name: "Japan",
     jpName: "日本",

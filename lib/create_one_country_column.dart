@@ -41,7 +41,7 @@ class CreateOneCountryColumn extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+//            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.only(left: 6.0, right: 3.0),
@@ -61,19 +61,21 @@ class CreateOneCountryColumn extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              Flexible(
+              child: Padding(
                 padding: EdgeInsets.only(left: 10.0),
-                child: Center(
-                  child: Text(
-                    name,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-
-                      fontWeight: FontWeight.bold,
+//                child: Center(
+                    child: Text(
+                      name,
+                      softWrap: true,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
+//                  ),
                 ),
               ),
             ],

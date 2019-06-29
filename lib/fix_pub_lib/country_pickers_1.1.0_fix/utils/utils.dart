@@ -16,7 +16,7 @@ class CountryPickerUtils {
   }
 
   static String getFlagImageAssetPath(String isoCode) {
-    return "assets/countries/flags2/${isoCode.toLowerCase()}.png";
+    return "assets/countries/flags/${isoCode.toLowerCase()}.png";
   }
 
   static Widget getDefaultFlagImage(Country country) {
