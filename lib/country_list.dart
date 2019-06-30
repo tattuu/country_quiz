@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:country_quiz/create_one_country_column.dart';
 //import 'package:country_quiz/unit.dart';
 
-import 'package:unicorndial/unicorndial.dart';
+import 'package:country_quiz/fix_pub_lib/unicorndial_1.1.5_fix/unicorndial.dart';
 
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/countries.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
@@ -20,6 +20,7 @@ class CountryList extends StatefulWidget {
 }
 
 class _CountryListState extends State<CountryList> {
+
   final continentTag = ['アジア', 'ヨーロッパ', '北アメリカ','南アメリカ', 'オセアニア', 'アフリカ'];
 
   final _tagColor = [];
@@ -95,6 +96,73 @@ class _CountryListState extends State<CountryList> {
 
   @override
   Widget build(BuildContext context) {
+    var childButtons = List<UnicornButton>();
+
+    childButtons.add(UnicornButton(
+      hasLabel: true,
+      labelText: "Search",
+      currentButton: FloatingActionButton(
+        heroTag: null,
+        backgroundColor: Colors.lightBlue,
+        child: Icon(
+          Icons.search,
+          size: 36,
+        ),
+        onPressed: () {
+          for (var i = 0; i < continentTag.length; i++){
+            _tagColor[i][continentTag[i]] = [Colors.black, Colors.white];
+          }
+          _listTileSet = Text(
+            'Search...',
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
+          );
+          searchResults.clear();
+          showDialog(
+            context: context,
+            barrierDismissible: true,
+            builder: (BuildContext context) {
+              return _searchOfCountry(context);
+            },
+          );
+        },
+      ),
+    ));
+    childButtons.add(UnicornButton(
+      hasLabel: true,
+      labelText: "Reload",
+      currentButton: FloatingActionButton(
+        heroTag: null,
+        backgroundColor: Colors.amber,
+        child: Icon(
+          Icons.refresh,
+          size: 40,
+        ),
+        onPressed: () {
+          setState(() {
+            _categories.clear();
+            countryFlagNames = countryList.where(acceptAllCountries).toList();
+            _retrieveCountryList();
+          });
+        },
+      ),
+    ));
+    childButtons.add(UnicornButton(
+      hasLabel: true,
+      labelText: "Back",
+      currentButton: FloatingActionButton(
+        heroTag: null,
+        backgroundColor: Colors.tealAccent[700],
+        child: Icon(
+          Icons.chevron_left,
+          size: 47,
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
+    ));
 
     continentTag.forEach((continent) {
       _tagColor.add({continent: [Colors.black, Colors.white]});
@@ -102,57 +170,20 @@ class _CountryListState extends State<CountryList> {
 
     final listView = Container(
       padding: EdgeInsets.only(top: 4.0, left: 4.0, right: 4.0),
-//      color: Colors.grey[50],
       child: _buildCategoryWidgets(_categories),
     );
 
     return Scaffold(
-      floatingActionButton: Column(
-        verticalDirection: VerticalDirection.up,
-        children: <Widget>[
-          FloatingActionButton(
-            heroTag: null,
-            backgroundColor: Colors.pink,
-            child: Icon(
-              Icons.chevron_left,
-              size: 45,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+      floatingActionButton: UnicornDialer(
+          backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
+          parentButtonBackground: Colors.pink,
+          orientation: UnicornOrientation.VERTICAL,
+          parentButton: Icon(
+            Icons.add,
           ),
-          Container(
-            margin: EdgeInsets.only(bottom: 15.0),
-            child: FloatingActionButton(
-              heroTag: null,
-              backgroundColor: Colors.pink,
-              child: Icon(
-                Icons.search,
-                size: 34,
-              ),
-              onPressed: () {
-                for (var i = 0; i < continentTag.length; i++){
-                    _tagColor[i][continentTag[i]] = [Colors.black, Colors.white];
-                }
-                _listTileSet = Text(
-                  'Search...',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
-                );
-                searchResults.clear();
-                showDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  builder: (BuildContext context) {
-                    return _searchOfCountry(context);
-                  },
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+          childPadding: 5.0,
+          childButtons: childButtons),
+
       body: listView,
     );
   }
