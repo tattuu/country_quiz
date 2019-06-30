@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DetailOfCountry extends StatelessWidget {
-  final String name;
+  final String isoCode;
   final String flagImagePath;
 
-  DetailOfCountry(this.name, this.flagImagePath);
+  DetailOfCountry(this.isoCode, this.flagImagePath);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class DetailOfCountry extends StatelessWidget {
           padding: EdgeInsets.only(left: 10.0, right: 10.0),
           child: Center(
             child: Hero(
-              tag: name,
+              tag: isoCode,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,

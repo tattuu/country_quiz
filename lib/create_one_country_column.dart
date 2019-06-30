@@ -7,17 +7,20 @@ final _rowHeight = 95.0; // 1行の高さ
 
 class CreateOneCountryColumn extends StatelessWidget {
 
+  final String isoCode;
   final String name;
   final Color color;
   final String flagImagePath;
 
   const CreateOneCountryColumn({
     Key key,
+    @required this.isoCode,
     @required this.name,
     @required this.color,
     @required this.flagImagePath,
 //    @required this.units,
-  }) : assert(name != null),
+  }) : assert(isoCode != null),
+        assert(name != null),
        assert(color != null),
        assert(flagImagePath != null),
        super(key: key);
@@ -51,13 +54,13 @@ class CreateOneCountryColumn extends StatelessWidget {
                   alignment: Alignment.center,
                   child: GestureDetector(
                     child: Hero(
-                      tag: name,
+                      tag: isoCode,
                       child: Image.asset(
                         flagImagePath,
                       ),
                     ),
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => DetailOfCountry(name, flagImagePath))),
+                        builder: (context) => DetailOfCountry(isoCode, flagImagePath))),
                   ),
                 ),
               ),

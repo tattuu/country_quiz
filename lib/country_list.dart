@@ -75,6 +75,7 @@ class _CountryListState extends State<CountryList> {
 
     countryFlagNames.forEach((countryFlagName) {
         var countryList = CreateOneCountryColumn(
+          isoCode: countryFlagName.isoCode,
           name: countryFlagName.jpName,
           color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(countryFlagName.isoCode),
