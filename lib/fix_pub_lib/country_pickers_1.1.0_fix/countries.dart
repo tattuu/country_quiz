@@ -861,10 +861,11 @@ final List<Country> countryList = [
     iso3Code: "KHM",
   ),
   Country(
-    continents: [""], isoCode: "KI",
+    continents: ["オセアニア"],
+    isoCode: "KI",
     phoneCode: "686",
     name: "Kiribati",
-    jpName: "キリバス",
+    jpName: "キリバス共和国",
     iso3Code: "KIR",
   ),
   Country(
@@ -1036,7 +1037,8 @@ final List<Country> countryList = [
     iso3Code: "MDG",
   ),
   Country(
-    continents: [""], isoCode: "MH",
+    continents: ["オセアニア"],
+    isoCode: "MH",
     phoneCode: "692",
     name: "Marshall Islands",
     jpName: "マーシャル諸島",
@@ -1218,14 +1220,16 @@ final List<Country> countryList = [
     iso3Code: "NPL",
   ),
   Country(
-    continents: [""], isoCode: "NR",
+    continents: ["オセアニア"],
+    isoCode: "NR",
     phoneCode: "674",
     name: "Nauru",
-    jpName: "ナウル",
+    jpName: "ナウル共和国",
     iso3Code: "NRU",
   ),
   Country(
-    continents: [""], isoCode: "NU",
+    continents: ["オセアニア"],
+    isoCode: "NU",
     phoneCode: "683",
     name: "Niue",
     jpName: "ニウエ",
@@ -1295,7 +1299,8 @@ final List<Country> countryList = [
     iso3Code: "POL",
   ),
   Country(
-    continents: [""], isoCode: "PM",
+    continents: ["オセアニア"],
+    isoCode: "PM",
     phoneCode: "508",
     name: "Saint Pierre and Miquelon",
     jpName: "サンピエール島・ミクロン島",
