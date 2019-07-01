@@ -5,8 +5,6 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart'
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country_picker_dialog.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
 
-import 'package:country_quiz/country_list.dart';
-
 
 class MainSearchDialog extends StatefulWidget {
 
