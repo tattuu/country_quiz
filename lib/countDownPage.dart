@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:country_quiz/fix_pub_lib/flutter_spinkit_3.1.0_fix/wave.dart';
-//import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:country_quiz/country_list.dart';
 
 
 class CountDown extends AnimatedWidget {
@@ -63,7 +61,6 @@ class _CountDownPageState extends State<CountDownPage>  with TickerProviderState
       duration: Duration(seconds: counter),
     );
     _controller.forward(from: 0.0);
-
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:country_quiz/top_page.dart'; // トップページをインポート
+import 'package:country_quiz/selectBattlePage.dart';
 
 void main() => runApp(MyApp()); // エンドポイント(MyAppを実行する)
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.orange[600], // AppBarの色
           fontFamily: 'Roboto', // フォント名
         ),
-      home: TopPage(), // トップページウィジェットを表示する
+      home: TopPage(),
     );
   }
 }

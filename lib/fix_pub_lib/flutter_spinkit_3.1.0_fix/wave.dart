@@ -52,15 +52,15 @@ class _SpinKitWaveState extends State<SpinKitWave>
     List<Widget> _bars;
     if (widget.type == SpinKitWaveType.start) {
       _bars = [
-        _bar(0, -1.65),
-        _bar(1, -1.55),
-        _bar(2, -1.45),
-        _bar(3, -1.35),
-        _bar(4, -1.25),
-        _bar(5, -1.15),
-        _bar(6, -1.05),
-        _bar(7, -.95),
-        _bar(8, -.85),
+        _bar(0, -1.644),
+        _bar(1, -1.544),
+        _bar(2, -1.444),
+        _bar(3, -1.344),
+        _bar(4, -1.244),
+        _bar(5, -1.144),
+        _bar(6, -1.044),
+        _bar(7, -.944),
+        _bar(8, -.844),
       ];
     } else if (widget.type == SpinKitWaveType.end) {
       _bars = [
@@ -110,6 +110,7 @@ class _SpinKitWaveState extends State<SpinKitWave>
         ? widget.itemBuilder(context, index)
         : DecoratedBox(
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15.0),
         color: widget.color,
       ),
     );

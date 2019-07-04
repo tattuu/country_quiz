@@ -53,13 +53,16 @@ class TwoButtonBasePage extends StatelessWidget {
     );
   }
 
-  Widget _iconName(BuildContext context, String name) { // アイコン下の文字に関するウィジェット
-    return Text( // 文字に関するウィジェット
-      name,
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 40,
-        fontWeight: FontWeight.bold, // 太字
+  Widget _iconName(BuildContext context, String name, Widget widget) { // アイコン下の文字に関するウィジェット
+    return GestureDetector(
+      onTap: () => _navigateToConverter(context, widget),
+      child: Text( // 文字に関するウィジェット
+        name,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 40,
+          fontWeight: FontWeight.bold, // 太字
+        ),
       ),
     );
   }
@@ -67,7 +70,11 @@ class TwoButtonBasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold( // 足場に関するウィジェット
-      appBar: AppBar( // アップバーに関するウィジェット
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white, //chan
+          // ge your color here
+        ),// アップバーに関するウィジェット
         title: Text(
           title,
           style: TextStyle(
@@ -84,11 +91,11 @@ class TwoButtonBasePage extends StatelessWidget {
             Spacer(flex: 10),
             _iconLogo(context, firstIconData, firstWidget, firstFontSize, iconColor), // 画像をアイコンとして生成して、iconLogoに渡す
             Spacer(),
-            _iconName(context, firstButtonName), // アイコン下の文字に関する処理
+            _iconName(context, firstButtonName, firstWidget), // アイコン下の文字に関する処理
             Spacer(flex: 15),
             _iconLogo(context, secondIconData, secondWidget, secondFontSize, iconColor),
             Spacer(),
-            _iconName(context, secondButtonName),
+            _iconName(context, secondButtonName, secondWidget),
             Spacer(flex: 10),
           ],
         ),
