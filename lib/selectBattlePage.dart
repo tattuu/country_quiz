@@ -25,8 +25,8 @@ class SelectBattlePage extends StatelessWidget {
       secondWidget: CountDownPage(
           widget: CountryList(),
           backgroundColor: Colors.grey[100],
-          barColor: Colors.blueAccent,
-          charColor: Colors.pink,
+          barColor: Colors.blue,
+          charColor: Colors.orange,
       ),
       firstFontSize: 100.0,
       secondFontSize: 90.0,

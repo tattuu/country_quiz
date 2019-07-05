@@ -45,19 +45,6 @@ class CountryListState extends State<CountryList> {
   }
 
   @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
-
-  _scrollToTop() {
-    _scrollController.animateTo(
-        _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1),
-        curve: Curves.easeIn);
-  }
-
-  @override
   Future<void> didChangeDependencies() async {
     super.didChangeDependencies();
 
@@ -76,12 +63,25 @@ class CountryListState extends State<CountryList> {
           color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               countryFlagName.isoCode),
-  //          units: units,
+          //          units: units,
         );
 
         categories.add(countryList);
       });
     });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  _scrollToTop() {
+    _scrollController.animateTo(
+        _scrollController.position.minScrollExtent,
+        duration: Duration(milliseconds: 1),
+        curve: Curves.easeIn);
   }
 
   Widget _buildCategoryWidgets(List<Widget> categories) {
