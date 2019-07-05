@@ -4,6 +4,7 @@ import 'package:country_quiz/twoButtonBasePage.dart';
 import 'package:country_quiz/country_list.dart';
 import 'package:country_quiz/countDownPage.dart';
 import 'package:country_quiz/trainingPage.dart';
+import 'package:country_quiz/testPage.dart';
 
 class SelectBattlePage extends StatelessWidget {
   // トップページに関するウィジェット
@@ -23,7 +24,7 @@ class SelectBattlePage extends StatelessWidget {
           charColor: Colors.orange,
       ),
       secondWidget: CountDownPage(
-          widget: CountryList(),
+          widget: TestPage(),
           backgroundColor: Colors.grey[100],
           barColor: Colors.blue,
           charColor: Colors.orange,
