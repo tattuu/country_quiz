@@ -79,14 +79,14 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
                           setState(() {
   //                          _countryName = 'セントビンセントおよびグレナディーン諸島';
 //                            _countryName = '';
-//                            _counter++;
+                            _counter++;
                           });
                         }
 //                        if(orientation==CardSwipeOrientation.RIGHT)
 ////                          print('RIGHT');
 //                        else if(orientation==CardSwipeOrientation.LEFT)
 //                          print('LEFT');
-
+//
 //                        print(index);
                       },
                     ),

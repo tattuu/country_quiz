@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
+import 'package:flutter/widgets.dart';
 
 List<Size> _cardSizes = new List();
 List<Alignment> _cardAligns = new List();
@@ -83,21 +84,20 @@ class TinderSwapCard extends StatefulWidget {
 
 class _TinderSwapCardState extends State<TinderSwapCard>
     with SingleTickerProviderStateMixin {
+  double _ratioOfPositionX = 0.0;
+  bool _dragCheck = false;
+  double _tapPositionX= 0.0;
+  double _opacityIndicator = 0.0;
   String _countryName = '';
   double _cardRote = 0.0;
   Alignment frontCardAlign;
   AnimationController _animationController;
   int _currentFront;
   int _counter = 0;
+  Alignment _iconDisplayAlignment;
 
   Widget _buildCard(BuildContext context, int realIndex) {
-//    print(_cardRote);
-//    print(_animationController.status);
-
     var _tinderFrontMostWidget;
-//    print(realIndex);
-//    print('huronto');
-//    print(_currentFront);
 
     if (realIndex < 0) {
       return Container();
@@ -163,11 +163,21 @@ class _TinderSwapCardState extends State<TinderSwapCard>
         onTapDown: (details) {
           setState(() {
             _countryName = widget.countryNames[_counter].jpName;
-//            print(widget.countryNames[_counter].jpName);
+            _tapPositionX = details.globalPosition.dx;
+            _dragCheck = true;
           });
+        },
+        onTapUp: (details) {
+          _dragCheck = false;
         },
         onPanUpdate: (DragUpdateDetails details) {
           setState(() {
+            if(!_dragCheck) {
+              _tapPositionX = details.globalPosition.dx;
+              _dragCheck = true;
+            }
+
+            _countryName = widget.countryNames[_counter].jpName;
             frontCardAlign = new Alignment(
                 frontCardAlign.x +
                     details.delta.dx * 20 / MediaQuery.of(context).size.width,
@@ -175,12 +185,26 @@ class _TinderSwapCardState extends State<TinderSwapCard>
                     details.delta.dy * 13 / MediaQuery.of(context).size.height);
 
             _cardRote = frontCardAlign.x;
-            print(_cardRote);
-           if (_cardRote > 0) {
-             print('YOU');
-           } else {
-             print('ME');
+
+            _ratioOfPositionX = (details.globalPosition.dx - _tapPositionX) / MediaQuery.of(context).size.width;
+
+            print(_ratioOfPositionX);
+            if (_ratioOfPositionX > 0.1) {
+             print('Right');
+             setState(() {
+               _opacityIndicator = _ratioOfPositionX - 0.1;
+               _opacityIndicator = min(_opacityIndicator + _opacityIndicator/0.3, 1);
+               _iconDisplayAlignment = Alignment.centerLeft;
+             });
+           } else if (_ratioOfPositionX < -0.1){
+             print('Left');
+             setState(() {
+               _opacityIndicator = _ratioOfPositionX.abs() -0.1;
+               _opacityIndicator = min(_opacityIndicator + _opacityIndicator/0.3, 1);
+               _iconDisplayAlignment = Alignment.centerRight;
+             });
            }
+//            print(_opacityIndicator);
 
             if (widget.swipeUpdateCallback != null) {
               print(details);
@@ -189,6 +213,8 @@ class _TinderSwapCardState extends State<TinderSwapCard>
           });
         },
         onPanEnd: (DragEndDetails details) {
+          _opacityIndicator = 0.0;
+          _dragCheck = false;
           animateCards();
         },
       ),
@@ -250,39 +276,54 @@ class _TinderSwapCardState extends State<TinderSwapCard>
   Widget _frontMostCard(BuildContext context, int index) {
 
     return GestureDetector(
-        child: Card(
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(40.0),
-          ),
-          color: Colors.grey[200],
-          child: Column(
-            //                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Container(
-                height: 40,
-              ),
-              Container(
-                alignment: Alignment.topCenter,
-                height: MediaQuery.of(context).size.height/ 3,
-                margin: EdgeInsets.only(left: 10, right: 10),
-                child: widget.countryImageWidgets[index],
-              ),
-              Spacer(),
-              Container(
-                padding: EdgeInsets.only(left: 15, right: 15),
-                child: Text(
-                  _countryName,
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+      child: Stack(
+        children: <Widget>[
+          Card(
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(40.0),
+            ),
+            color: Colors.grey[200],
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Container(
+                  height: 40,
+                ),
+                Container(
+                  alignment: Alignment.topCenter,
+                  height: MediaQuery.of(context).size.height/ 3,
+                  margin: EdgeInsets.only(left: 10, right: 10),
+                  child: widget.countryImageWidgets[index],
+                ),
+                Spacer(),
+                Container(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Text(
+                    _countryName,
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-              Spacer(),
-            ],
+                Spacer(),
+              ],
+            ),
           ),
-        ),
+          Opacity(
+            opacity: _opacityIndicator,
+//            opacity: 1,
+            child: Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              height: MediaQuery.of(context).size.height / 1.5,
+              width: MediaQuery.of(context).size.width / 1.15,
+              alignment: _iconDisplayAlignment,
+              child: _iconDisplay(),
+            ),
+          ),
+        ],
+      ),
 //        onTapDown: (detail) {
 //          setState(() {
 //            print(detail);
@@ -290,6 +331,22 @@ class _TinderSwapCardState extends State<TinderSwapCard>
 //          });
 //        }
     );
+  }
+
+  Widget _iconDisplay() {
+    if (_ratioOfPositionX < 0.1) {
+      return Icon(
+        Icons.help_outline,
+        size: 80.0,
+        color: Colors.cyanAccent[400],
+      );
+    } else {
+      return Icon(
+        Icons.panorama_fish_eye,
+        size: 80.0,
+        color: Colors.orange,
+      );
+    }
   }
 }
 
