@@ -27,6 +27,7 @@ dependencies:
   vector_math: ^2.0.8
   flutter_swiper : ^1.1.6
   flutter_spinkit: ^3.1.0
+  percent_indicator: "^2.1.1"
 
 dev_dependencies:
   flutter_test:
@@ -58,15 +59,6 @@ flutter:
     - family:  IconDumbbellAndBarbell
       fonts:
         - asset: assets/icons/dumbbellAndBarbell.ttf
-    - family:  SunIcon
-      fonts:
-        - asset: assets/icons/sunIcon.ttf
-    - family:  SnowIcon
-      fonts:
-        - asset: assets/icons/snowIcon.ttf
-#    - family:  IconTrainingNotSmile
-#      fonts:
-#        - asset: assets/icons/trainingNotSmile.ttf
     -  family: Roboto
        fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
@@ -75,6 +67,7 @@ flutter:
   assets:
     - assets/json/country_list.json
     - assets/countries/flags/
+    - assets/resultFace/
 #    - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

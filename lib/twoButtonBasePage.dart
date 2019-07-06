@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:country_quiz/copyrightAttribution.dart';
 
 class TwoButtonBasePage extends StatelessWidget {
   final String title;
@@ -32,6 +33,27 @@ class TwoButtonBasePage extends StatelessWidget {
         return widget;
       },
     ));
+  }
+
+  Widget _copyrightDisplay(BuildContext context) {
+    if (title == 'Challenge') {
+      return Container(
+        height: 40,
+        width: 40,
+        child: FloatingActionButton(
+            backgroundColor: Colors.blue[600],
+            child: Icon(
+              Icons.layers,
+            ),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>
+                  CopyrightAttributionPage()));
+            }
+        ),
+      );
+    } else {
+      return Container();
+    }
   }
 
   Widget _iconLogo(BuildContext context, IconData icon, Widget widget, double fontSize, Color iconColor) { // アイコンに関するウィジェット
@@ -84,6 +106,7 @@ class TwoButtonBasePage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: _copyrightDisplay(context),
       body: Center(
         child: Column( // 縦の行
           mainAxisAlignment: MainAxisAlignment.spaceAround,
