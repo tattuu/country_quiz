@@ -201,7 +201,7 @@ class _TestPageState extends State<TestPage> {
 
   void _screenTransition() {
     if (_counter == _questionCount) {
-      Timer(Duration(milliseconds: 3500), () {
+      Timer(Duration(milliseconds: 3100), () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) =>
             TrainingResult(
               knowCountryList: _knowList,
@@ -358,8 +358,12 @@ class _TestPageState extends State<TestPage> {
               } else {
                 _unKnowList.add(country);
               }
-              _screenTransition();
-              _getQuestionCountry();
+              if (_counter == _questionCount) {
+                _screenTransition();
+              }
+              if (_counter < _questionCount) {
+                _getQuestionCountry();
+              }
               print(_counter);
               print(_percent);
             }

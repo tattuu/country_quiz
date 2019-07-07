@@ -12,20 +12,19 @@ class CopyrightAttributionPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Spacer(),
-              Text('使用したアイコンなどについてのCopyrightAttributionPage'),
+              Text(
+                'CopyrightAttributionPageForIcon',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
               Spacer(),
               Text(
-                'Streamline Emoji is a free collection of cute emoji, started as a part of Streamline UX. Made by @webalys under the Creative Common Attribution licence',
-                style: TextStyle(
-  //                fontSize: 20,
-                )
+                'Streamline Emoji is a free collection of cute emoji, \nstarted as a part of Streamline UX.\n Made by @webalys under \nthe Creative Common Attribution licence',
               ),
               Spacer(),
               Text(
                 'Icon made by Freepik from www.flaticon.com',
-                style: TextStyle(
-  //                fontSize: 20,
-                )
               ),
               Spacer(),
             ],
