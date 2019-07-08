@@ -4,7 +4,7 @@ import 'package:country_quiz/fix_pub_lib/unicorndial_1.1.5_fix/unicorndial.dart'
 
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
-
+import 'package:country_quiz/l10n/l10n.dart';
 
 class TrainingResult extends StatefulWidget {
 
@@ -22,15 +22,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
   ScrollController _scrollController;
   var knowCountryWidgetColumn = <CreateOneCountryColumn>[];
   var unKnowCountryWidgetColumn = <CreateOneCountryColumn>[];
-
-  final tabs = <Tab>[
-    Tab(
-      text: 'Know',
-    ),
-    Tab(
-      text: 'unKnow',
-    ),
-  ];
+  var tabs;
 
   @override
   void initState() {
@@ -38,11 +30,21 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
 
 //    _tabController = TabController(length: tabs.length, vsync: this);
     _scrollController = ScrollController();
+
   }
 
   @override
   Future<void> didChangeDependencies() async {
     super.didChangeDependencies();
+
+    tabs = <Tab>[
+      Tab(
+        text: L10n.of(context).know,
+      ),
+      Tab(
+        text: L10n.of(context).unKnow,
+      ),
+    ];
 
     if (knowCountryWidgetColumn.isEmpty) {
       await retrieveCountryList();
@@ -55,7 +57,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
       widget.knowCountryList.forEach((knowCountry) {
         knowCountryWidgetColumn.add(CreateOneCountryColumn(
           isoCode: knowCountry.isoCode,
-          name: knowCountry.jpName,
+          name: knowCountry.name,
           color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               knowCountry.isoCode),
@@ -64,7 +66,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
       widget.unKnowCountryList.forEach((unKnowCountry) {
         unKnowCountryWidgetColumn.add(CreateOneCountryColumn(
           isoCode: unKnowCountry.isoCode,
-          name: unKnowCountry.jpName,
+          name: unKnowCountry.name,
           color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               unKnowCountry.isoCode),
@@ -100,7 +102,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
 
     childButtons.add(UnicornButton(
       hasLabel: true,
-      labelText: "Reload",
+      labelText: "${L10n.of(context).reload}",
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.amber,
@@ -116,7 +118,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
     ));
     childButtons.add(UnicornButton(
       hasLabel: true,
-      labelText: "Back",
+      labelText: "${L10n.of(context).back}",
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.tealAccent[700],

@@ -5,15 +5,15 @@ import 'package:flutter/widgets.dart';
 
 
 class CountryPickerUtils {
-  static Country getCountryByIsoCode(String isoCode) {
-    try {
-      return countryList.firstWhere(
-        (country) => country.isoCode.toLowerCase() == isoCode.toLowerCase(),
-      );
-    } catch (error) {
-      throw Exception("The initialValue provided is not a supported iso code!");
-    }
-  }
+//  static Country getCountryByIsoCode(String isoCode) {
+//    try {
+//      return countryList(context).firstWhere(
+//        (country) => country.isoCode.toLowerCase() == isoCode.toLowerCase(),
+//      );
+//    } catch (error) {
+//      throw Exception("The initialValue provided is not a supported iso code!");
+//    }
+//  }
 
   static String getFlagImageAssetPath(String isoCode) {
     return "assets/countries/flags/${isoCode.toLowerCase()}.png";

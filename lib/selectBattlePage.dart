@@ -5,6 +5,7 @@ import 'package:country_quiz/country_list.dart';
 import 'package:country_quiz/countDownPage.dart';
 import 'package:country_quiz/trainingPage.dart';
 import 'package:country_quiz/testPage.dart';
+import 'package:country_quiz/l10n/l10n.dart';
 
 class SelectBattlePage extends StatelessWidget {
   // トップページに関するウィジェット
@@ -12,9 +13,9 @@ class SelectBattlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TwoButtonBasePage(
-      title: 'Challenge',
-      firstButtonName: 'Trainng',
-      secondButtonName: 'Test',
+      title: L10n.of(context).challenge,
+      firstButtonName: L10n.of(context).training,
+      secondButtonName: L10n.of(context).test,
       firstIconData: IconData(0xe800, fontFamily: 'IconCards'),
       secondIconData: Icons.gamepad,
       firstWidget: CountDownPage(

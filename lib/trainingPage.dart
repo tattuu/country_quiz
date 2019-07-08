@@ -22,7 +22,14 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
 
   @override
   void initState() {
-    _countryImageNames = countryList.where(acceptAllCountries).toList();
+
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _countryImageNames = countryList(context).where(acceptAllCountries).toList();
 
 //    countryList.forEach((country) {
     _countryImageNames.forEach((country) {
@@ -30,9 +37,7 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
         Image.asset(CountryPickerUtils.getFlagImageAssetPath(country.isoCode)),
       );
     });
-    super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -154,7 +159,7 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
 //      onTapDown: (detail) {
 //        setState(() {
 //          print(detail);
-//          _countryName = _countryImageName[index].jpName;
+//          _countryName = _countryImageName[index].name;
 //        });
 //      }
     );

@@ -5,6 +5,8 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/my_aler
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'countries.dart';
+import 'package:country_quiz/l10n/l10n.dart';
+
 
 ///Provides a customizable [Dialog] which displays all countries
 /// with optional search feature
@@ -110,12 +112,18 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
 
   @override
   void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
     _allCountries =
-        countryList.where(widget.itemFilter ?? acceptAllCountries).toList();
+        countryList(context).where(widget.itemFilter ?? acceptAllCountries).toList();
 
     _filteredCountries = _allCountries;
 
-    super.initState();
   }
 
   @override
@@ -138,7 +146,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
                 .map((item) => SimpleDialogOption(
                       child: widget.itemBuilder != null
                           ? widget.itemBuilder(item)
-                          : Text(item.jpName),
+                          : Text(item.name),
                       onPressed: () {
                         widget.onValuePicked(item);
                         Navigator.pop(context);
@@ -149,7 +157,7 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
         : widget.searchEmptyView ??
             Center(
 //              child: Text('No country found.'),
-              child: Text('該当する国がありません'),
+              child: Text(L10n.of(context).notFoundForSearchResult),
             );
   }
 
@@ -178,16 +186,16 @@ class SingleChoiceDialogState extends State<CountryPickerDialog> {
       autofocus: true,
       cursorColor: widget.searchCursorColor,
       decoration:
-          widget.searchInputDecoration ?? InputDecoration(hintText: 'Search'),
+          widget.searchInputDecoration ?? InputDecoration(hintText: '${L10n.of(context).search}...'),
       onChanged: (String value) {
         setState(() {
           _filteredCountries = _allCountries
               .where((Country country) =>
                   country.name.toLowerCase().startsWith(value.toLowerCase()) ||
-                  //                  country.phoneCode.startsWith(value) ||
-                  //                  country.isoCode.toLowerCase().startsWith(value.toLowerCase()) ||
-                  country.jpName.startsWith(value) ||
-                  country.jpName.startsWith(_kanaConvert(value)))
+                  // country.phoneCode.startsWith(value) ||
+                  // country.isoCode.toLowerCase().startsWith(value.toLowerCase()) ||
+                  country.name.startsWith(_kanaConvert(value)) ||
+                  country.nameForJpSearch.startsWith(_kanaConvert(value)))
               .toList();
         });
       },

@@ -1,0 +1,1288 @@
+{
+  "@@locale": "messages",
+  "@@last_modified": "2019-07-08T23:50:10.399208",
+  "list": "リスト",
+  "@list": {
+    "description": "TopPageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "challenge": "チャレンジ",
+  "@challenge": {
+    "description": "TopPageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "training": "トレーニング",
+  "@training": {
+    "description": "ChallengePageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "test": "テスト",
+  "@test": {
+    "description": "ChallengePageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "know": "知っている",
+  "@know": {
+    "description": "ResultTabValue",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unKnow": "知らない",
+  "@unKnow": {
+    "description": "ResultTabValue",
+    "type": "text",
+    "placeholders": {}
+  },
+  "reload": "更新",
+  "@reload": {
+    "description": "FloatingActionButtonForReload",
+    "type": "text",
+    "placeholders": {}
+  },
+  "back": "戻る",
+  "@back": {
+    "description": "FloatingActionButtonForBack",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "検索",
+  "@search": {
+    "description": "Search",
+    "type": "text",
+    "placeholders": {}
+  },
+  "asiaForSearchCategory": "アジア",
+  "@asiaForSearchCategory": {
+    "description": "asiaForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "europeForSearchCategory": "ヨーロッパ",
+  "@europeForSearchCategory": {
+    "description": "europeForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "africaForSearchCategory": "アフリカ",
+  "@africaForSearchCategory": {
+    "description": "africaForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "northAmericaForSearchCategory": "北アメリカ",
+  "@northAmericaForSearchCategory": {
+    "description": "northAmericaForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "southAmericaForSearchCategory": "南アメリカ",
+  "@southAmericaForSearchCategory": {
+    "description": "southAmericaForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "oceaniaForSearchCategory": "オセアニア",
+  "@oceaniaForSearchCategory": {
+    "description": "oceaniaForSearchCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "andorraInCountryCategory": "アンドラ",
+  "@andorraInCountryCategory": {
+    "description": "andorraInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "areInCountryCategory": "アラブ首長国連邦",
+  "@areInCountryCategory": {
+    "description": "areInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "afghanistanInCountryCategory": "アフガニスタン",
+  "@afghanistanInCountryCategory": {
+    "description": "afghanistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "atgInCountryCategory": "アンティグア・バーブーダ",
+  "@atgInCountryCategory": {
+    "description": "atgInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "albaniaInCountryCategory": "アルバニア",
+  "@albaniaInCountryCategory": {
+    "description": "albaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "armeniaInCountryCategory": "アルメニア",
+  "@armeniaInCountryCategory": {
+    "description": "armeniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "angolaInCountryCategory": "アンゴラ",
+  "@angolaInCountryCategory": {
+    "description": "angolaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "argentinaInCountryCategory": "アルゼンチン",
+  "@argentinaInCountryCategory": {
+    "description": "argentinaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "austriaInCountryCategory": "オーストリア",
+  "@austriaInCountryCategory": {
+    "description": "austriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "australiaInCountryCategory": "オーストラリア",
+  "@australiaInCountryCategory": {
+    "description": "australiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "azerbaijanInCountryCategory": "アゼルバイジャン",
+  "@azerbaijanInCountryCategory": {
+    "description": "azerbaijanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bihInCountryCategory": "ボスニア・ヘルツェゴビナ",
+  "@bihInCountryCategory": {
+    "description": "bihInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "barbadosInCountryCategory": "バルバドス",
+  "@barbadosInCountryCategory": {
+    "description": "barbadosInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bangladeshInCountryCategory": "バングラデシュ",
+  "@bangladeshInCountryCategory": {
+    "description": "bangladeshInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belgiumInCountryCategory": "ベルギー",
+  "@belgiumInCountryCategory": {
+    "description": "belgiumInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bfaInCountryCategory": "ブルキナファソ",
+  "@bfaInCountryCategory": {
+    "description": "bfaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bulgariaInCountryCategory": "ブルガリア",
+  "@bulgariaInCountryCategory": {
+    "description": "bulgariaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bahrainInCountryCategory": "バーレーン",
+  "@bahrainInCountryCategory": {
+    "description": "bahrainInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "burundiInCountryCategory": "ブルンジ",
+  "@burundiInCountryCategory": {
+    "description": "burundiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "beninInCountryCategory": "ベナン",
+  "@beninInCountryCategory": {
+    "description": "beninInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "brnInCountryCategory": "ブルネイ",
+  "@brnInCountryCategory": {
+    "description": "brnInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bolInCountryCategory": "ボリビア",
+  "@bolInCountryCategory": {
+    "description": "bolInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "brazilInCountryCategory": "ブラジル",
+  "@brazilInCountryCategory": {
+    "description": "brazilInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bahamasInCountryCategory": "バハマ",
+  "@bahamasInCountryCategory": {
+    "description": "bahamasInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bhutanInCountryCategory": "ブータン王国",
+  "@bhutanInCountryCategory": {
+    "description": "bhutanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "botswanaInCountryCategory": "ボツワナ",
+  "@botswanaInCountryCategory": {
+    "description": "botswanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belarusInCountryCategory": "ベラルーシ",
+  "@belarusInCountryCategory": {
+    "description": "belarusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belizeInCountryCategory": "ベリーズ",
+  "@belizeInCountryCategory": {
+    "description": "belizeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "canadaInCountryCategory": "カナダ",
+  "@canadaInCountryCategory": {
+    "description": "canadaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "codInCountryCategory": "コンゴ民主共和国",
+  "@codInCountryCategory": {
+    "description": "codInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cafInCountryCategory": "中央アフリカ共和国",
+  "@cafInCountryCategory": {
+    "description": "cafInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cogInCountryCategory": "コンゴ",
+  "@cogInCountryCategory": {
+    "description": "cogInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "switzerlandInCountryCategory": "スイス",
+  "@switzerlandInCountryCategory": {
+    "description": "switzerlandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "civInCountryCategory": "コートジボワール",
+  "@civInCountryCategory": {
+    "description": "civInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cokInCountryCategory": "クック諸島",
+  "@cokInCountryCategory": {
+    "description": "cokInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chileInCountryCategory": "チリ",
+  "@chileInCountryCategory": {
+    "description": "chileInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cameroonInCountryCategory": "カメルーン",
+  "@cameroonInCountryCategory": {
+    "description": "cameroonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chinaInCountryCategory": "中国(中華人民共和国)",
+  "@chinaInCountryCategory": {
+    "description": "chinaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "colombiaInCountryCategory": "コロンビア",
+  "@colombiaInCountryCategory": {
+    "description": "colombiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "criInCountryCategory": "コスタリカ",
+  "@criInCountryCategory": {
+    "description": "criInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cubaInCountryCategory": "キューバ",
+  "@cubaInCountryCategory": {
+    "description": "cubaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cpvInCountryCategory": "カーボベルデ",
+  "@cpvInCountryCategory": {
+    "description": "cpvInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cyprusInCountryCategory": "キプロス",
+  "@cyprusInCountryCategory": {
+    "description": "cyprusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "czeInCountryCategory": "チェコ",
+  "@czeInCountryCategory": {
+    "description": "czeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "germanyInCountryCategory": "ドイツ",
+  "@germanyInCountryCategory": {
+    "description": "germanyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "djiboutiInCountryCategory": "ジブチ",
+  "@djiboutiInCountryCategory": {
+    "description": "djiboutiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "denmarkInCountryCategory": "デンマーク",
+  "@denmarkInCountryCategory": {
+    "description": "denmarkInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dominicaInCountryCategory": "ドミニカ",
+  "@dominicaInCountryCategory": {
+    "description": "dominicaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "domInCountryCategory": "ドミニカ共和国",
+  "@domInCountryCategory": {
+    "description": "domInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "algeriaInCountryCategory": "アルジェリア",
+  "@algeriaInCountryCategory": {
+    "description": "algeriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ecuadorInCountryCategory": "エクアドル",
+  "@ecuadorInCountryCategory": {
+    "description": "ecuadorInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "estoniaInCountryCategory": "エストニア",
+  "@estoniaInCountryCategory": {
+    "description": "estoniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "egyptInCountryCategory": "エジプト",
+  "@egyptInCountryCategory": {
+    "description": "egyptInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "eritreaInCountryCategory": "エリトリア",
+  "@eritreaInCountryCategory": {
+    "description": "eritreaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "spainInCountryCategory": "スペイン",
+  "@spainInCountryCategory": {
+    "description": "spainInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ethiopiaInCountryCategory": "エチオピア",
+  "@ethiopiaInCountryCategory": {
+    "description": "ethiopiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "finlandInCountryCategory": "フィンランド",
+  "@finlandInCountryCategory": {
+    "description": "finlandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fijiInCountryCategory": "フィジー",
+  "@fijiInCountryCategory": {
+    "description": "fijiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fsmInCountryCategory": "ミクロネシア連邦",
+  "@fsmInCountryCategory": {
+    "description": "fsmInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "franceInCountryCategory": "フランス",
+  "@franceInCountryCategory": {
+    "description": "franceInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gabonInCountryCategory": "ガボン",
+  "@gabonInCountryCategory": {
+    "description": "gabonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gbrInCountryCategory": "イギリス",
+  "@gbrInCountryCategory": {
+    "description": "gbrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "grenadaInCountryCategory": "グレナダ",
+  "@grenadaInCountryCategory": {
+    "description": "grenadaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "georgiaInCountryCategory": "ジョージア",
+  "@georgiaInCountryCategory": {
+    "description": "georgiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ghanaInCountryCategory": "ガーナ",
+  "@ghanaInCountryCategory": {
+    "description": "ghanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gambiaInCountryCategory": "ガンビア",
+  "@gambiaInCountryCategory": {
+    "description": "gambiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guineaInCountryCategory": "ギニア",
+  "@guineaInCountryCategory": {
+    "description": "guineaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gnqInCountryCategory": "赤道ギニア",
+  "@gnqInCountryCategory": {
+    "description": "gnqInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "greeceInCountryCategory": "ギリシャ",
+  "@greeceInCountryCategory": {
+    "description": "greeceInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guatemalaInCountryCategory": "グアテマラ",
+  "@guatemalaInCountryCategory": {
+    "description": "guatemalaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gnbInCountryCategory": "ギニアビサウ",
+  "@gnbInCountryCategory": {
+    "description": "gnbInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guyanaInCountryCategory": "ガイアナ",
+  "@guyanaInCountryCategory": {
+    "description": "guyanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hondurasInCountryCategory": "ホンジュラス",
+  "@hondurasInCountryCategory": {
+    "description": "hondurasInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "croatiaInCountryCategory": "クロアチア",
+  "@croatiaInCountryCategory": {
+    "description": "croatiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "haitiInCountryCategory": "ハイチ",
+  "@haitiInCountryCategory": {
+    "description": "haitiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hungaryInCountryCategory": "ハンガリー",
+  "@hungaryInCountryCategory": {
+    "description": "hungaryInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "indonesiaInCountryCategory": "インドネシア",
+  "@indonesiaInCountryCategory": {
+    "description": "indonesiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "irelandInCountryCategory": "アイルランド",
+  "@irelandInCountryCategory": {
+    "description": "irelandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "israelInCountryCategory": "イスラエル",
+  "@israelInCountryCategory": {
+    "description": "israelInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "indiaInCountryCategory": "インド",
+  "@indiaInCountryCategory": {
+    "description": "indiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "iraqInCountryCategory": "イラク",
+  "@iraqInCountryCategory": {
+    "description": "iraqInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "irnInCountryCategory": "イラン",
+  "@irnInCountryCategory": {
+    "description": "irnInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "icelandInCountryCategory": "アイスランド",
+  "@icelandInCountryCategory": {
+    "description": "icelandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "italyInCountryCategory": "イタリア",
+  "@italyInCountryCategory": {
+    "description": "italyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "jamaicaInCountryCategory": "ジャマイカ",
+  "@jamaicaInCountryCategory": {
+    "description": "jamaicaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "jordanInCountryCategory": "ヨルダン",
+  "@jordanInCountryCategory": {
+    "description": "jordanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "japanInCountryCategory": "日本",
+  "@japanInCountryCategory": {
+    "description": "japanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kenyaInCountryCategory": "ケニア",
+  "@kenyaInCountryCategory": {
+    "description": "kenyaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kyrgyzstanInCountryCategory": "キルギス",
+  "@kyrgyzstanInCountryCategory": {
+    "description": "kyrgyzstanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cambodiaInCountryCategory": "カンボジア",
+  "@cambodiaInCountryCategory": {
+    "description": "cambodiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kiribatiInCountryCategory": "キリバス",
+  "@kiribatiInCountryCategory": {
+    "description": "kiribatiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "comorosInCountryCategory": "コモロ",
+  "@comorosInCountryCategory": {
+    "description": "comorosInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "knaInCountryCategory": "セントクリストファー・ネイビス",
+  "@knaInCountryCategory": {
+    "description": "knaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "prkInCountryCategory": "北朝鮮(朝鮮民主主義人民共和国)",
+  "@prkInCountryCategory": {
+    "description": "prkInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "korInCountryCategory": "韓国(大韓民国)",
+  "@korInCountryCategory": {
+    "description": "korInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kuwaitInCountryCategory": "クウェート",
+  "@kuwaitInCountryCategory": {
+    "description": "kuwaitInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kazakhstanInCountryCategory": "カザフスタン",
+  "@kazakhstanInCountryCategory": {
+    "description": "kazakhstanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "laoInCountryCategory": "ラオス人民民主共和国",
+  "@laoInCountryCategory": {
+    "description": "laoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lebanonInCountryCategory": "レバノン",
+  "@lebanonInCountryCategory": {
+    "description": "lebanonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lcaInCountryCategory": "セントルシア",
+  "@lcaInCountryCategory": {
+    "description": "lcaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "liechtensteinInCountryCategory": "リヒテンシュタイン",
+  "@liechtensteinInCountryCategory": {
+    "description": "liechtensteinInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lkaInCountryCategory": "スリランカ",
+  "@lkaInCountryCategory": {
+    "description": "lkaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "liberiaInCountryCategory": "リベリア",
+  "@liberiaInCountryCategory": {
+    "description": "liberiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lesothoInCountryCategory": "レソト",
+  "@lesothoInCountryCategory": {
+    "description": "lesothoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lithuaniaInCountryCategory": "リトアニア",
+  "@lithuaniaInCountryCategory": {
+    "description": "lithuaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "luxembourgInCountryCategory": "ルクセンブルク",
+  "@luxembourgInCountryCategory": {
+    "description": "luxembourgInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "latviaInCountryCategory": "ラトビア",
+  "@latviaInCountryCategory": {
+    "description": "latviaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "libyaInCountryCategory": "リビア",
+  "@libyaInCountryCategory": {
+    "description": "libyaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "moroccoInCountryCategory": "モロッコ",
+  "@moroccoInCountryCategory": {
+    "description": "moroccoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "monacoInCountryCategory": "モナコ公国",
+  "@monacoInCountryCategory": {
+    "description": "monacoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mdaInCountryCategory": "モルドバ",
+  "@mdaInCountryCategory": {
+    "description": "mdaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "montenegroInCountryCategory": "モンテネグロ",
+  "@montenegroInCountryCategory": {
+    "description": "montenegroInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "madagascarInCountryCategory": "マダガスカル",
+  "@madagascarInCountryCategory": {
+    "description": "madagascarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mhlInCountryCategory": "マーシャル諸島",
+  "@mhlInCountryCategory": {
+    "description": "mhlInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mkdInCountryCategory": "北マケドニア",
+  "@mkdInCountryCategory": {
+    "description": "mkdInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maliInCountryCategory": "マリ",
+  "@maliInCountryCategory": {
+    "description": "maliInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "myanmarInCountryCategory": "ミャンマー",
+  "@myanmarInCountryCategory": {
+    "description": "myanmarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mongoliaInCountryCategory": "モンゴル",
+  "@mongoliaInCountryCategory": {
+    "description": "mongoliaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mauritaniaInCountryCategory": "モーリタニア",
+  "@mauritaniaInCountryCategory": {
+    "description": "mauritaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maltaInCountryCategory": "マルタ",
+  "@maltaInCountryCategory": {
+    "description": "maltaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mauritiusInCountryCategory": "モーリシャス",
+  "@mauritiusInCountryCategory": {
+    "description": "mauritiusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maldivesInCountryCategory": "モルディブ",
+  "@maldivesInCountryCategory": {
+    "description": "maldivesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "malawiInCountryCategory": "マラウイ",
+  "@malawiInCountryCategory": {
+    "description": "malawiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mexicoInCountryCategory": "メキシコ",
+  "@mexicoInCountryCategory": {
+    "description": "mexicoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "malaysiaInCountryCategory": "マレーシア",
+  "@malaysiaInCountryCategory": {
+    "description": "malaysiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mozambiqueInCountryCategory": "モザンビーク",
+  "@mozambiqueInCountryCategory": {
+    "description": "mozambiqueInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "namibiaInCountryCategory": "ナミビア",
+  "@namibiaInCountryCategory": {
+    "description": "namibiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nigerInCountryCategory": "ニジェール",
+  "@nigerInCountryCategory": {
+    "description": "nigerInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nigeriaInCountryCategory": "ナイジェリア",
+  "@nigeriaInCountryCategory": {
+    "description": "nigeriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nicaraguaInCountryCategory": "ニカラグア",
+  "@nicaraguaInCountryCategory": {
+    "description": "nicaraguaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "netherlandsInCountryCategory": "オランダ",
+  "@netherlandsInCountryCategory": {
+    "description": "netherlandsInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "norwayInCountryCategory": "ノルウェー",
+  "@norwayInCountryCategory": {
+    "description": "norwayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nepalInCountryCategory": "ネパール",
+  "@nepalInCountryCategory": {
+    "description": "nepalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nauruInCountryCategory": "ナウル",
+  "@nauruInCountryCategory": {
+    "description": "nauruInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "niueInCountryCategory": "ニウエ",
+  "@niueInCountryCategory": {
+    "description": "niueInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nzlInCountryCategory": "ニュージーランド",
+  "@nzlInCountryCategory": {
+    "description": "nzlInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "omanInCountryCategory": "オマーン",
+  "@omanInCountryCategory": {
+    "description": "omanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "panamaInCountryCategory": "パナマ",
+  "@panamaInCountryCategory": {
+    "description": "panamaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "peruInCountryCategory": "ペルー",
+  "@peruInCountryCategory": {
+    "description": "peruInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pngInCountryCategory": "パプア・ニューギニア",
+  "@pngInCountryCategory": {
+    "description": "pngInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "philippinesInCountryCategory": "フィリピン",
+  "@philippinesInCountryCategory": {
+    "description": "philippinesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pakistanInCountryCategory": "パキスタン",
+  "@pakistanInCountryCategory": {
+    "description": "pakistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "polandInCountryCategory": "ポーランド",
+  "@polandInCountryCategory": {
+    "description": "polandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "portugalInCountryCategory": "ポルトガル",
+  "@portugalInCountryCategory": {
+    "description": "portugalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "palauInCountryCategory": "パラオ",
+  "@palauInCountryCategory": {
+    "description": "palauInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "paraguayInCountryCategory": "パラグアイ",
+  "@paraguayInCountryCategory": {
+    "description": "paraguayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "qatarInCountryCategory": "カタール",
+  "@qatarInCountryCategory": {
+    "description": "qatarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "romaniaInCountryCategory": "ルーマニア",
+  "@romaniaInCountryCategory": {
+    "description": "romaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "serbiaInCountryCategory": "セルビア",
+  "@serbiaInCountryCategory": {
+    "description": "serbiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rusInCountryCategory": "ロシア",
+  "@rusInCountryCategory": {
+    "description": "rusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rwandaInCountryCategory": "ルワンダ",
+  "@rwandaInCountryCategory": {
+    "description": "rwandaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sauInCountryCategory": "サウジアラビア",
+  "@sauInCountryCategory": {
+    "description": "sauInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slbInCountryCategory": "ソロモン諸島",
+  "@slbInCountryCategory": {
+    "description": "slbInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "seychellesInCountryCategory": "セーシェル",
+  "@seychellesInCountryCategory": {
+    "description": "seychellesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sudanInCountryCategory": "スーダン",
+  "@sudanInCountryCategory": {
+    "description": "sudanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "swedenInCountryCategory": "スウェーデン",
+  "@swedenInCountryCategory": {
+    "description": "swedenInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "singaporeInCountryCategory": "シンガポール",
+  "@singaporeInCountryCategory": {
+    "description": "singaporeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sloveniaInCountryCategory": "スロベニア",
+  "@sloveniaInCountryCategory": {
+    "description": "sloveniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slovakiaInCountryCategory": "スロバキア",
+  "@slovakiaInCountryCategory": {
+    "description": "slovakiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sleInCountryCategory": "シエラレオネ",
+  "@sleInCountryCategory": {
+    "description": "sleInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "smrInCountryCategory": "サンマリノ",
+  "@smrInCountryCategory": {
+    "description": "smrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "senegalInCountryCategory": "セネガル",
+  "@senegalInCountryCategory": {
+    "description": "senegalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "somaliaInCountryCategory": "ソマリア",
+  "@somaliaInCountryCategory": {
+    "description": "somaliaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "surinameInCountryCategory": "スリナム",
+  "@surinameInCountryCategory": {
+    "description": "surinameInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ssdInCountryCategory": "南スーダン",
+  "@ssdInCountryCategory": {
+    "description": "ssdInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "stpInCountryCategory": "サントメ・プリンシペ",
+  "@stpInCountryCategory": {
+    "description": "stpInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slvInCountryCategory": "エルサルバドル",
+  "@slvInCountryCategory": {
+    "description": "slvInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "syrInCountryCategory": "シリア",
+  "@syrInCountryCategory": {
+    "description": "syrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "swzInCountryCategory": "エスワティニ",
+  "@swzInCountryCategory": {
+    "description": "swzInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chadInCountryCategory": "チャド",
+  "@chadInCountryCategory": {
+    "description": "chadInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "togoInCountryCategory": "トーゴ",
+  "@togoInCountryCategory": {
+    "description": "togoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "thailandInCountryCategory": "タイ",
+  "@thailandInCountryCategory": {
+    "description": "thailandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tajikistanInCountryCategory": "タジキスタン",
+  "@tajikistanInCountryCategory": {
+    "description": "tajikistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tlsInCountryCategory": "東ティモール",
+  "@tlsInCountryCategory": {
+    "description": "tlsInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "turkmenistanInCountryCategory": "トルクメニスタン",
+  "@turkmenistanInCountryCategory": {
+    "description": "turkmenistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tunisiaInCountryCategory": "チュニジア",
+  "@tunisiaInCountryCategory": {
+    "description": "tunisiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tongaInCountryCategory": "トンガ",
+  "@tongaInCountryCategory": {
+    "description": "tongaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "turkeyInCountryCategory": "トルコ",
+  "@turkeyInCountryCategory": {
+    "description": "turkeyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ttoInCountryCategory": "トリニダード・トバゴ",
+  "@ttoInCountryCategory": {
+    "description": "ttoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tuvaluInCountryCategory": "ツバル",
+  "@tuvaluInCountryCategory": {
+    "description": "tuvaluInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "taiwanInCountryCategory": "中華民国(中国台湾省)",
+  "@taiwanInCountryCategory": {
+    "description": "taiwanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tzaInCountryCategory": "タンザニア",
+  "@tzaInCountryCategory": {
+    "description": "tzaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ukrInCountryCategory": "ウクライナ",
+  "@ukrInCountryCategory": {
+    "description": "ukrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ugaInCountryCategory": "ウガンダ",
+  "@ugaInCountryCategory": {
+    "description": "ugaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "usaInCountryCategory": "アメリカ合衆国",
+  "@usaInCountryCategory": {
+    "description": "usaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "uruguayInCountryCategory": "ウルグアイ",
+  "@uruguayInCountryCategory": {
+    "description": "uruguayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "uzbekistanInCountryCategory": "ウズベキスタン",
+  "@uzbekistanInCountryCategory": {
+    "description": "uzbekistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vatInCountryCategory": "バチカン市国",
+  "@vatInCountryCategory": {
+    "description": "vatInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vctInCountryCategory": "セントビンセントおよびグレナディーン諸島",
+  "@vctInCountryCategory": {
+    "description": "vctInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "venInCountryCategory": "ベネズエラ",
+  "@venInCountryCategory": {
+    "description": "venInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vietnamInCountryCategory": "ベトナム",
+  "@vietnamInCountryCategory": {
+    "description": "vietnamInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vanuatuInCountryCategory": "バヌアツ",
+  "@vanuatuInCountryCategory": {
+    "description": "vanuatuInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kosovoInCountryCategory": "コソボ",
+  "@kosovoInCountryCategory": {
+    "description": "kosovoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "samoaInCountryCategory": "サモア",
+  "@samoaInCountryCategory": {
+    "description": "samoaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "yemenInCountryCategory": "イエメン",
+  "@yemenInCountryCategory": {
+    "description": "yemenInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zafInCountryCategory": "南アフリカ",
+  "@zafInCountryCategory": {
+    "description": "zafInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zambiaInCountryCategory": "ザンビア",
+  "@zambiaInCountryCategory": {
+    "description": "zambiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zimbabweInCountryCategory": "ジンバブエ",
+  "@zimbabweInCountryCategory": {
+    "description": "zimbabweInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "notFoundForSearchResult": "国が見つかりませんでした",
+  "@notFoundForSearchResult": {
+    "description": "notFoundForSearchResult",
+    "type": "text",
+    "placeholders": {}
+  }
+}

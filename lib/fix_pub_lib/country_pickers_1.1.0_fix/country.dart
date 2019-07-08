@@ -1,12 +1,12 @@
 class Country {
   final String name;
-  final String jpName;
+  final String nameForJpSearch;
   final String isoCode;
   final String iso3Code;
   final String phoneCode;
   final List<String> continents;
 
-  Country({this.isoCode, this.iso3Code, this.phoneCode, this.name, this.jpName, this.continents});
+  Country({this.isoCode, this.iso3Code, this.phoneCode, this.name, this.nameForJpSearch, this.continents});
 
 //  factory Country.fromMap(Map<String, String> map) => Country(
 //        name: map['name'],

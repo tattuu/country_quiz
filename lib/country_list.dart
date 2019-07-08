@@ -10,7 +10,7 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart'
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/typedefs.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
 import 'package:country_quiz/searchDialog.dart';
-
+import 'package:country_quiz/l10n/l10n.dart';
 
 class CountryList extends StatefulWidget {
 
@@ -40,12 +40,13 @@ class CountryListState extends State<CountryList> {
   @override
   void initState() {
     super.initState();
-    countryFlagNames = countryList.where(acceptAllCountries).toList();
     _scrollController = ScrollController();
   }
 
   @override
   Future<void> didChangeDependencies() async {
+    countryFlagNames = countryList(context).where(acceptAllCountries).toList();
+
     super.didChangeDependencies();
 
     if (categories.isEmpty) {
@@ -53,20 +54,26 @@ class CountryListState extends State<CountryList> {
     }
   }
 
+  _scrollToTop() {
+    _scrollController.animateTo(
+        _scrollController.position.minScrollExtent,
+        duration: Duration(milliseconds: 1),
+        curve: Curves.easeIn);
+  }
+
   Future<void> retrieveCountryList() async {
     setState(() {
+      _scrollToTop();
       categories.clear();
       countryFlagNames.forEach((countryFlagName) {
-        var countryList = CreateOneCountryColumn(
+        categories.add(CreateOneCountryColumn(
           isoCode: countryFlagName.isoCode,
-          name: countryFlagName.jpName,
+          name: countryFlagName.name,
           color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               countryFlagName.isoCode),
           //          units: units,
-        );
-
-        categories.add(countryList);
+        ));
       });
     });
   }
@@ -75,13 +82,6 @@ class CountryListState extends State<CountryList> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
-  }
-
-  _scrollToTop() {
-    _scrollController.animateTo(
-        _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1),
-        curve: Curves.easeIn);
   }
 
   Widget _buildCategoryWidgets(List<Widget> categories) {
@@ -98,7 +98,7 @@ class CountryListState extends State<CountryList> {
 
     childButtons.add(UnicornButton(
       hasLabel: true,
-      labelText: "Search",
+      labelText: L10n.of(context).search,
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.lightBlue,
@@ -126,7 +126,7 @@ class CountryListState extends State<CountryList> {
     ));
     childButtons.add(UnicornButton(
       hasLabel: true,
-      labelText: "Reload",
+      labelText: L10n.of(context).reload,
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.amber,
@@ -136,14 +136,14 @@ class CountryListState extends State<CountryList> {
         ),
         onPressed: () {
           _scrollToTop();
-          countryFlagNames = countryList.where(acceptAllCountries).toList();
+          countryFlagNames = countryList(context).where(acceptAllCountries).toList();
           retrieveCountryList();
         },
       ),
     ));
     childButtons.add(UnicornButton(
       hasLabel: true,
-      labelText: "Back",
+      labelText: L10n.of(context).back,
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.tealAccent[700],

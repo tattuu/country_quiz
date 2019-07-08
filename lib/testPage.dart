@@ -16,7 +16,7 @@ class TestPage extends StatefulWidget {
 class _TestPageState extends State<TestPage> {
 
   final _questionCount = 15;
-  var _counter;
+  int _counter;
   var _percent;
   final double selectButtonPadding = 0;
   final double _selectButtonShape = 30;
@@ -39,7 +39,7 @@ class _TestPageState extends State<TestPage> {
 
       for (int i = 0; i < 4; i++) {
         while(i == _oneQuestionMap.length) {
-          _oneQuestionMap.add(countryList[random.nextInt(countryList.length)]);
+          _oneQuestionMap.add(countryList(context)[random.nextInt(countryList(context).length)]);
         }
       }
       _selectButtonContentList = _oneQuestionMap.toList();
@@ -50,7 +50,7 @@ class _TestPageState extends State<TestPage> {
       } else {
         _questionViewContent = Center(
           child: Text(
-            _questionViewCountry.jpName,
+            _questionViewCountry.name,
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -64,15 +64,19 @@ class _TestPageState extends State<TestPage> {
 
   @override
   void initState() {
-    _counter = 0.0;
+    _counter = 0;
     _percent = 0.0;
     random = Random.secure();
-
-    _getQuestionCountry();
 
     super.initState();
   }
 
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    _getQuestionCountry();
+  }
 
   Widget _finDisplay() {
 
@@ -185,11 +189,15 @@ class _TestPageState extends State<TestPage> {
           Container(
             height: 50,
           ),
-          Text(
-            '${_knowList.length.toString()}/$_questionCount',
-            style: TextStyle(
-              fontSize: 50,
-              fontWeight: FontWeight.bold,
+          Container(
+            alignment: Alignment.topRight,
+            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width / 3),
+            child: Text(
+              '${_knowList.length.toString()}/$_questionCount',
+              style: TextStyle(
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Spacer(),
@@ -300,7 +308,7 @@ class _TestPageState extends State<TestPage> {
           setState(() {
             if (_counter < _questionCount) {
               _counter++;
-              _percent = _counter / _questionCount;
+              _percent = _counter.toDouble() / _questionCount;
               if (_questionViewCountry.isoCode == country.isoCode) {
                 _knowList.add(country);
               } else {
@@ -330,7 +338,7 @@ class _TestPageState extends State<TestPage> {
             padding: EdgeInsets.only(left: 10, right: 10),
             child: Center(
               child: Text(
-                country.jpName,
+                country.name,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 20,
@@ -352,7 +360,7 @@ class _TestPageState extends State<TestPage> {
           setState(() {
             if (_counter < _questionCount) {
               _counter++;
-              _percent = _counter / _questionCount;
+              _percent = _counter.toDouble() / _questionCount;
               if (_questionViewCountry.isoCode == country.isoCode) {
                 _knowList.add(country);
               } else {

@@ -66,7 +66,7 @@ class CreateOneCountryColumn extends StatelessWidget {
               ),
               Flexible(
               child: Padding(
-                padding: EdgeInsets.only(left: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0),
 //                child: Center(
                     child: Text(
                       name,

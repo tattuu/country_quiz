@@ -4,7 +4,7 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/countries.dar
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country_picker_dialog.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
-
+import 'package:country_quiz/l10n/l10n.dart';
 
 class MainSearchDialog extends StatefulWidget {
 
@@ -15,7 +15,8 @@ class MainSearchDialog extends StatefulWidget {
 class _MainSearchDialog extends State<MainSearchDialog>{
   var countryFlagNames = <Country>[];
   final searchResults = <String>[];
-  final continentTag = ['アジア', 'ヨーロッパ', '北アメリカ', '南アメリカ', 'オセアニア', 'アフリカ'];
+  var continentTag;
+
   final _tagColor = [];
 
   Country _selectedDialogCountry;
@@ -25,20 +26,35 @@ class _MainSearchDialog extends State<MainSearchDialog>{
 
   @override
   void initState() {
+
+    _selectedDialogCountry = null;
+    super.initState();
+  }
+
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
     _listTileSet = Text(
-      'Search...',
+      '${L10n.of(context).search}...',
       style: TextStyle(
         fontSize: 20.0,
       ),
     );
 
-    _selectedDialogCountry = null;
+    continentTag = [
+      L10n.of(context).asiaForSearchCategory,
+      L10n.of(context).europeForSearchCategory,
+      L10n.of(context).northAmericaForSearchCategory,
+      L10n.of(context).southAmericaForSearchCategory,
+      L10n.of(context).oceaniaForSearchCategory,
+      L10n.of(context).africaForSearchCategory,
+    ];
 
     for (var i = 0; i < continentTag.length; i++) {
       _tagColor.add({continentTag[i]: [Colors.black, Colors.white]});
     }
 
-    super.initState();
+
   }
 
   Widget _oneTag(String tagName, int setNum) =>
@@ -63,7 +79,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
                 searchResults.add(tagName);
                 setState(() {
                   _listTileSet = Text(
-                    'Search...',
+                    '${L10n.of(context).search}...',
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -112,7 +128,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
                   titlePadding: EdgeInsets.only(top: 1.0),
                   searchCursorColor: Colors.pink,
                   searchInputDecoration: InputDecoration(
-                    hintText: 'Search...',
+                    hintText: '${L10n.of(context).search}...',
                   ),
                   isSearchable: true,
 //                  title: Text('国を検索して下さい'),
@@ -125,7 +141,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
                       }
                     });
                     searchResults.clear();
-                    searchResults.add(_selectedDialogCountry.jpName);
+                    searchResults.add(_selectedDialogCountry.name);
 
                   },
                   itemBuilder: _buildDialogItem
@@ -145,7 +161,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
             child: Container(
 //            padding: EdgeInsets.only(bottom: 3.0),
               child: Text(
-                country.jpName,
+                country.name,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
                 style: TextStyle(
@@ -231,11 +247,11 @@ class _MainSearchDialog extends State<MainSearchDialog>{
 
                           var continentHit = [];
 
-                          countryFlagNames = countryList.where((country) =>
-                          searchResults.indexOf(country.jpName) > -1).toList();
+                          countryFlagNames = countryList(context).where((country) =>
+                          searchResults.indexOf(country.name) > -1).toList();
 
                           if (countryFlagNames.length == 0) {
-                            countryList.forEach((country) =>
+                            countryList(context).forEach((country) =>
                                 continentHit.add(country.continents.where((
                                     countryContinent) =>
                                 searchResults.indexOf(countryContinent) > -1)
@@ -243,7 +259,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
 
                             for (var i = 0; i < continentHit.length; i++) {
                               if (continentHit[i].length != 0) {
-                                countryFlagNames.add(countryList[i]);
+                                countryFlagNames.add(countryList(context)[i]);
                               }
                             }
                           }

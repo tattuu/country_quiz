@@ -162,7 +162,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
       child: new GestureDetector(
         onTapDown: (details) {
           setState(() {
-            _countryName = widget.countryNames[_counter].jpName;
+            _countryName = widget.countryNames[_counter].name;
             _tapPositionX = details.globalPosition.dx;
             _dragCheck = true;
           });
@@ -177,7 +177,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
               _dragCheck = true;
             }
 
-            _countryName = widget.countryNames[_counter].jpName;
+            _countryName = widget.countryNames[_counter].name;
             frontCardAlign = new Alignment(
                 frontCardAlign.x +
                     details.delta.dx * 20 / MediaQuery.of(context).size.width,
@@ -327,7 +327,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
 //        onTapDown: (detail) {
 //          setState(() {
 //            print(detail);
-//            _countryName = widget.countryNames[index].jpName;
+//            _countryName = widget.countryNames[index].name;
 //          });
 //        }
     );

@@ -1,0 +1,1288 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2019-07-08T01:30:46.657522",
+  "list": "List",
+  "@list": {
+    "description": "TopPageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "challenge": "Challenge",
+  "@challenge": {
+    "description": "TopPageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "training": "Training",
+  "@training": {
+    "description": "ChallengePageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "test": "Test",
+  "@test": {
+    "description": "ChallengePageButtonName",
+    "type": "text",
+    "placeholders": {}
+  },
+  "know": "Know",
+  "@know": {
+    "description": "ResultTabValue",
+    "type": "text",
+    "placeholders": {}
+   },
+   "unKnow": "unKnow",
+   "@unKnow": {
+     "description": "ResultTabValue",
+     "type": "text",
+     "placeholders": {}
+   },
+   "reload": "Reload",
+   "@reload": {
+     "description": "FloatingActionButtonForReload",
+     "type": "text",
+     "placeholders": {}
+   },
+   "back": "Back",
+   "@back": {
+     "description": "FloatingActionButtonForBack",
+     "type": "text",
+     "placeholders": {}
+   },
+   "search": "Search",
+   "@search": {
+     "description": "Search",
+     "type": "text",
+     "placeholders": {}
+   },
+   "asiaForSearchCategory": "Asia",
+   "@asiaForSearchCategory": {
+     "description": "asiaForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+   "europeForSearchCategory": "Europe",
+   "@europeForSearchCategory": {
+     "description": "europeForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+   "africaForSearchCategory": "Africa",
+   "@africaForSearchCategory": {
+     "description": "africaForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+   "northAmericaForSearchCategory": "North America",
+   "@northAmericaForSearchCategory": {
+     "description": "northAmericaForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+   "southAmericaForSearchCategory": "South America",
+   "@southAmericaForSearchCategory": {
+     "description": "southAmericaForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+   "oceaniaForSearchCategory": "Oceania",
+   "@oceaniaForSearchCategory": {
+     "description": "oceaniaForSearchCategory",
+     "type": "text",
+     "placeholders": {}
+   },
+     "andorraInCountryCategory": "Andorra",
+     "@andorraInCountryCategory": {
+       "description": "andorraInCountryCategory",
+       "type": "text",
+       "placeholders": {}
+     },
+"areInCountryCategory": "United Arab Emirates",
+  "@areInCountryCategory": {
+    "description": "areInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "afghanistanInCountryCategory": "Afghanistan",
+  "@afghanistanInCountryCategory": {
+    "description": "afghanistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "atgInCountryCategory": "Antigua and Barbuda",
+  "@atgInCountryCategory": {
+    "description": "atgInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "albaniaInCountryCategory": "Albania",
+  "@albaniaInCountryCategory": {
+    "description": "albaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "armeniaInCountryCategory": "Armenia",
+  "@armeniaInCountryCategory": {
+    "description": "armeniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "angolaInCountryCategory": "Angola",
+  "@angolaInCountryCategory": {
+    "description": "angolaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "argentinaInCountryCategory": "Argentina",
+  "@argentinaInCountryCategory": {
+    "description": "argentinaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "austriaInCountryCategory": "Austria",
+  "@austriaInCountryCategory": {
+    "description": "austriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "australiaInCountryCategory": "Australia",
+  "@australiaInCountryCategory": {
+    "description": "australiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "azerbaijanInCountryCategory": "Azerbaijan",
+  "@azerbaijanInCountryCategory": {
+    "description": "azerbaijanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bihInCountryCategory": "Bosnia and Herzegovina",
+  "@bihInCountryCategory": {
+    "description": "bihInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "barbadosInCountryCategory": "Barbados",
+  "@barbadosInCountryCategory": {
+    "description": "barbadosInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bangladeshInCountryCategory": "Bangladesh",
+  "@bangladeshInCountryCategory": {
+    "description": "bangladeshInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belgiumInCountryCategory": "Belgium",
+  "@belgiumInCountryCategory": {
+    "description": "belgiumInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bfaInCountryCategory": "Burkina Faso",
+  "@bfaInCountryCategory": {
+    "description": "bfaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bulgariaInCountryCategory": "Bulgaria",
+  "@bulgariaInCountryCategory": {
+    "description": "bulgariaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bahrainInCountryCategory": "Bahrain",
+  "@bahrainInCountryCategory": {
+    "description": "bahrainInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "burundiInCountryCategory": "Burundi",
+  "@burundiInCountryCategory": {
+    "description": "burundiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "beninInCountryCategory": "Benin",
+  "@beninInCountryCategory": {
+    "description": "beninInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "brnInCountryCategory": "Brunei Darussalam",
+  "@brnInCountryCategory": {
+    "description": "brnInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bolInCountryCategory": "Plurinational State of　Bolivia",
+  "@bolInCountryCategory": {
+    "description": "bolInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "brazilInCountryCategory": "Brazil",
+  "@brazilInCountryCategory": {
+    "description": "brazilInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bahamasInCountryCategory": "Bahamas",
+  "@bahamasInCountryCategory": {
+    "description": "bahamasInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bhutanInCountryCategory": "Kindom of Bhutan",
+  "@bhutanInCountryCategory": {
+    "description": "bhutanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "botswanaInCountryCategory": "Botswana",
+  "@botswanaInCountryCategory": {
+    "description": "botswanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belarusInCountryCategory": "Belarus",
+  "@belarusInCountryCategory": {
+    "description": "belarusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "belizeInCountryCategory": "Belize",
+  "@belizeInCountryCategory": {
+    "description": "belizeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "canadaInCountryCategory": "Canada",
+  "@canadaInCountryCategory": {
+    "description": "canadaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "codInCountryCategory": "Democratic Republic of the Congo",
+  "@codInCountryCategory": {
+    "description": "codInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cafInCountryCategory": "Central African Republic",
+  "@cafInCountryCategory": {
+    "description": "cafInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cogInCountryCategory": "Congo",
+  "@cogInCountryCategory": {
+    "description": "cogInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "switzerlandInCountryCategory": "Switzerland",
+  "@switzerlandInCountryCategory": {
+    "description": "switzerlandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "civInCountryCategory": "Côte d'Ivoire",
+  "@civInCountryCategory": {
+    "description": "civInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cokInCountryCategory": "Cook Islands",
+  "@cokInCountryCategory": {
+    "description": "cokInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chileInCountryCategory": "Chile",
+  "@chileInCountryCategory": {
+    "description": "chileInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cameroonInCountryCategory": "Cameroon",
+  "@cameroonInCountryCategory": {
+    "description": "cameroonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chinaInCountryCategory": "China",
+  "@chinaInCountryCategory": {
+    "description": "chinaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "colombiaInCountryCategory": "Colombia",
+  "@colombiaInCountryCategory": {
+    "description": "colombiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "criInCountryCategory": "Costa Rica",
+  "@criInCountryCategory": {
+    "description": "criInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cubaInCountryCategory": "Cuba",
+  "@cubaInCountryCategory": {
+    "description": "cubaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cpvInCountryCategory": "Cape Verde",
+  "@cpvInCountryCategory": {
+    "description": "cpvInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cyprusInCountryCategory": "Cyprus",
+  "@cyprusInCountryCategory": {
+    "description": "cyprusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "czeInCountryCategory": "Czech Republic",
+  "@czeInCountryCategory": {
+    "description": "czeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "germanyInCountryCategory": "Germany",
+  "@germanyInCountryCategory": {
+    "description": "germanyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "djiboutiInCountryCategory": "Djibouti",
+  "@djiboutiInCountryCategory": {
+    "description": "djiboutiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "denmarkInCountryCategory": "Denmark",
+  "@denmarkInCountryCategory": {
+    "description": "denmarkInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dominicaInCountryCategory": "Dominica",
+  "@dominicaInCountryCategory": {
+    "description": "dominicaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "domInCountryCategory": "Dominican Republic",
+  "@domInCountryCategory": {
+    "description": "domInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "algeriaInCountryCategory": "Algeria",
+  "@algeriaInCountryCategory": {
+    "description": "algeriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ecuadorInCountryCategory": "Ecuador",
+  "@ecuadorInCountryCategory": {
+    "description": "ecuadorInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "estoniaInCountryCategory": "Estonia",
+  "@estoniaInCountryCategory": {
+    "description": "estoniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "egyptInCountryCategory": "Egypt",
+  "@egyptInCountryCategory": {
+    "description": "egyptInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "eritreaInCountryCategory": "Eritrea",
+  "@eritreaInCountryCategory": {
+    "description": "eritreaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "spainInCountryCategory": "Spain",
+  "@spainInCountryCategory": {
+    "description": "spainInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ethiopiaInCountryCategory": "Ethiopia",
+  "@ethiopiaInCountryCategory": {
+    "description": "ethiopiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "finlandInCountryCategory": "Finland",
+  "@finlandInCountryCategory": {
+    "description": "finlandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fijiInCountryCategory": "Fiji",
+  "@fijiInCountryCategory": {
+    "description": "fijiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fsmInCountryCategory": "Federated States of Micronesia",
+  "@fsmInCountryCategory": {
+    "description": "fsmInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "franceInCountryCategory": "France",
+  "@franceInCountryCategory": {
+    "description": "franceInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gabonInCountryCategory": "Gabon",
+  "@gabonInCountryCategory": {
+    "description": "gabonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gbrInCountryCategory": "United Kingdom",
+  "@gbrInCountryCategory": {
+    "description": "gbrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "grenadaInCountryCategory": "Grenada",
+  "@grenadaInCountryCategory": {
+    "description": "grenadaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "georgiaInCountryCategory": "Georgia",
+  "@georgiaInCountryCategory": {
+    "description": "georgiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ghanaInCountryCategory": "Ghana",
+  "@ghanaInCountryCategory": {
+    "description": "ghanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gambiaInCountryCategory": "Gambia",
+  "@gambiaInCountryCategory": {
+    "description": "gambiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guineaInCountryCategory": "Guinea",
+  "@guineaInCountryCategory": {
+    "description": "guineaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gnqInCountryCategory": "Equatorial Guinea",
+  "@gnqInCountryCategory": {
+    "description": "gnqInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "greeceInCountryCategory": "Greece",
+  "@greeceInCountryCategory": {
+    "description": "greeceInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guatemalaInCountryCategory": "Guatemala",
+  "@guatemalaInCountryCategory": {
+    "description": "guatemalaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gnbInCountryCategory": "Guinea-Bissau",
+  "@gnbInCountryCategory": {
+    "description": "gnbInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "guyanaInCountryCategory": "Guyana",
+  "@guyanaInCountryCategory": {
+    "description": "guyanaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hondurasInCountryCategory": "Honduras",
+  "@hondurasInCountryCategory": {
+    "description": "hondurasInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "croatiaInCountryCategory": "Croatia",
+  "@croatiaInCountryCategory": {
+    "description": "croatiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "haitiInCountryCategory": "Haiti",
+  "@haitiInCountryCategory": {
+    "description": "haitiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hungaryInCountryCategory": "Hungary",
+  "@hungaryInCountryCategory": {
+    "description": "hungaryInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "indonesiaInCountryCategory": "Indonesia",
+  "@indonesiaInCountryCategory": {
+    "description": "indonesiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "irelandInCountryCategory": "Ireland",
+  "@irelandInCountryCategory": {
+    "description": "irelandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "israelInCountryCategory": "Israel",
+  "@israelInCountryCategory": {
+    "description": "israelInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "indiaInCountryCategory": "India",
+  "@indiaInCountryCategory": {
+    "description": "indiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "iraqInCountryCategory": "Iraq",
+  "@iraqInCountryCategory": {
+    "description": "iraqInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "irnInCountryCategory": "Islamic Republic of Iran",
+  "@irnInCountryCategory": {
+    "description": "irnInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "icelandInCountryCategory": "Iceland",
+  "@icelandInCountryCategory": {
+    "description": "icelandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "italyInCountryCategory": "Italy",
+  "@italyInCountryCategory": {
+    "description": "italyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "jamaicaInCountryCategory": "Jamaica",
+  "@jamaicaInCountryCategory": {
+    "description": "jamaicaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "jordanInCountryCategory": "Jordan",
+  "@jordanInCountryCategory": {
+    "description": "jordanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "japanInCountryCategory": "Japan",
+  "@japanInCountryCategory": {
+    "description": "japanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kenyaInCountryCategory": "Kenya",
+  "@kenyaInCountryCategory": {
+    "description": "kenyaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kyrgyzstanInCountryCategory": "Kyrgyzstan",
+  "@kyrgyzstanInCountryCategory": {
+    "description": "kyrgyzstanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cambodiaInCountryCategory": "Cambodia",
+  "@cambodiaInCountryCategory": {
+    "description": "cambodiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kiribatiInCountryCategory": "Kiribati",
+  "@kiribatiInCountryCategory": {
+    "description": "kiribatiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "comorosInCountryCategory": "Comoros",
+  "@comorosInCountryCategory": {
+    "description": "comorosInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "knaInCountryCategory": "Saint Kitts and Nevis",
+  "@knaInCountryCategory": {
+    "description": "knaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "prkInCountryCategory": "Democratic People's Republic of Korea",
+  "@prkInCountryCategory": {
+    "description": "prkInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "korInCountryCategory": "Republic of Korea",
+  "@korInCountryCategory": {
+    "description": "korInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kuwaitInCountryCategory": "Kuwait",
+  "@kuwaitInCountryCategory": {
+    "description": "kuwaitInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kazakhstanInCountryCategory": "Kazakhstan",
+  "@kazakhstanInCountryCategory": {
+    "description": "kazakhstanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "laoInCountryCategory": "Lao People's Democratic Republic",
+  "@laoInCountryCategory": {
+    "description": "laoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lebanonInCountryCategory": "Lebanon",
+  "@lebanonInCountryCategory": {
+    "description": "lebanonInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lcaInCountryCategory": "Saint Lucia",
+  "@lcaInCountryCategory": {
+    "description": "lcaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "liechtensteinInCountryCategory": "Liechtenstein",
+  "@liechtensteinInCountryCategory": {
+    "description": "liechtensteinInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lkaInCountryCategory": "Sri Lanka",
+  "@lkaInCountryCategory": {
+    "description": "lkaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "liberiaInCountryCategory": "Liberia",
+  "@liberiaInCountryCategory": {
+    "description": "liberiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lesothoInCountryCategory": "Lesotho",
+  "@lesothoInCountryCategory": {
+    "description": "lesothoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "lithuaniaInCountryCategory": "Lithuania",
+  "@lithuaniaInCountryCategory": {
+    "description": "lithuaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "luxembourgInCountryCategory": "Luxembourg",
+  "@luxembourgInCountryCategory": {
+    "description": "luxembourgInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "latviaInCountryCategory": "Latvia",
+  "@latviaInCountryCategory": {
+    "description": "latviaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "libyaInCountryCategory": "Libya",
+  "@libyaInCountryCategory": {
+    "description": "libyaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "moroccoInCountryCategory": "Morocco",
+  "@moroccoInCountryCategory": {
+    "description": "moroccoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "monacoInCountryCategory": "Principality of Monaco",
+  "@monacoInCountryCategory": {
+    "description": "monacoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mdaInCountryCategory": "Republic of Moldova",
+  "@mdaInCountryCategory": {
+    "description": "mdaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "montenegroInCountryCategory": "Montenegro",
+  "@montenegroInCountryCategory": {
+    "description": "montenegroInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "madagascarInCountryCategory": "Madagascar",
+  "@madagascarInCountryCategory": {
+    "description": "madagascarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mhlInCountryCategory": "Marshall Islands",
+  "@mhlInCountryCategory": {
+    "description": "mhlInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mkdInCountryCategory": "the former Yugoslav Republic of Macedonia",
+  "@mkdInCountryCategory": {
+    "description": "mkdInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maliInCountryCategory": "Mali",
+  "@maliInCountryCategory": {
+    "description": "maliInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "myanmarInCountryCategory": "Myanmar",
+  "@myanmarInCountryCategory": {
+    "description": "myanmarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mongoliaInCountryCategory": "Mongolia",
+  "@mongoliaInCountryCategory": {
+    "description": "mongoliaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mauritaniaInCountryCategory": "Mauritania",
+  "@mauritaniaInCountryCategory": {
+    "description": "mauritaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maltaInCountryCategory": "Malta",
+  "@maltaInCountryCategory": {
+    "description": "maltaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mauritiusInCountryCategory": "Mauritius",
+  "@mauritiusInCountryCategory": {
+    "description": "mauritiusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "maldivesInCountryCategory": "Maldives",
+  "@maldivesInCountryCategory": {
+    "description": "maldivesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "malawiInCountryCategory": "Malawi",
+  "@malawiInCountryCategory": {
+    "description": "malawiInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mexicoInCountryCategory": "Mexico",
+  "@mexicoInCountryCategory": {
+    "description": "mexicoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "malaysiaInCountryCategory": "Malaysia",
+  "@malaysiaInCountryCategory": {
+    "description": "malaysiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mozambiqueInCountryCategory": "Mozambique",
+  "@mozambiqueInCountryCategory": {
+    "description": "mozambiqueInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "namibiaInCountryCategory": "Namibia",
+  "@namibiaInCountryCategory": {
+    "description": "namibiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nigerInCountryCategory": "Niger",
+  "@nigerInCountryCategory": {
+    "description": "nigerInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nigeriaInCountryCategory": "Nigeria",
+  "@nigeriaInCountryCategory": {
+    "description": "nigeriaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nicaraguaInCountryCategory": "Nicaragua",
+  "@nicaraguaInCountryCategory": {
+    "description": "nicaraguaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "netherlandsInCountryCategory": "Netherlands",
+  "@netherlandsInCountryCategory": {
+    "description": "netherlandsInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "norwayInCountryCategory": "Norway",
+  "@norwayInCountryCategory": {
+    "description": "norwayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nepalInCountryCategory": "Nepal",
+  "@nepalInCountryCategory": {
+    "description": "nepalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nauruInCountryCategory": "Nauru",
+  "@nauruInCountryCategory": {
+    "description": "nauruInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "niueInCountryCategory": "Niue",
+  "@niueInCountryCategory": {
+    "description": "niueInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nzlInCountryCategory": "New Zealand",
+  "@nzlInCountryCategory": {
+    "description": "nzlInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "omanInCountryCategory": "Oman",
+  "@omanInCountryCategory": {
+    "description": "omanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "panamaInCountryCategory": "Panama",
+  "@panamaInCountryCategory": {
+    "description": "panamaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "peruInCountryCategory": "Peru",
+  "@peruInCountryCategory": {
+    "description": "peruInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pngInCountryCategory": "Papua New Guinea",
+  "@pngInCountryCategory": {
+    "description": "pngInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "philippinesInCountryCategory": "Philippines",
+  "@philippinesInCountryCategory": {
+    "description": "philippinesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pakistanInCountryCategory": "Pakistan",
+  "@pakistanInCountryCategory": {
+    "description": "pakistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "polandInCountryCategory": "Poland",
+  "@polandInCountryCategory": {
+    "description": "polandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "portugalInCountryCategory": "Portugal",
+  "@portugalInCountryCategory": {
+    "description": "portugalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "palauInCountryCategory": "Palau",
+  "@palauInCountryCategory": {
+    "description": "palauInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "paraguayInCountryCategory": "Paraguay",
+  "@paraguayInCountryCategory": {
+    "description": "paraguayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "qatarInCountryCategory": "Qatar",
+  "@qatarInCountryCategory": {
+    "description": "qatarInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "romaniaInCountryCategory": "Romania",
+  "@romaniaInCountryCategory": {
+    "description": "romaniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "serbiaInCountryCategory": "Serbia",
+  "@serbiaInCountryCategory": {
+    "description": "serbiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rusInCountryCategory": "Russian Federation",
+  "@rusInCountryCategory": {
+    "description": "rusInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rwandaInCountryCategory": "Rwanda",
+  "@rwandaInCountryCategory": {
+    "description": "rwandaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sauInCountryCategory": "Saudi Arabia",
+  "@sauInCountryCategory": {
+    "description": "sauInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slbInCountryCategory": "Solomon Islands",
+  "@slbInCountryCategory": {
+    "description": "slbInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "seychellesInCountryCategory": "Seychelles",
+  "@seychellesInCountryCategory": {
+    "description": "seychellesInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sudanInCountryCategory": "Sudan",
+  "@sudanInCountryCategory": {
+    "description": "sudanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "swedenInCountryCategory": "Sweden",
+  "@swedenInCountryCategory": {
+    "description": "swedenInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "singaporeInCountryCategory": "Singapore",
+  "@singaporeInCountryCategory": {
+    "description": "singaporeInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sloveniaInCountryCategory": "Slovenia",
+  "@sloveniaInCountryCategory": {
+    "description": "sloveniaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slovakiaInCountryCategory": "Slovakia",
+  "@slovakiaInCountryCategory": {
+    "description": "slovakiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sleInCountryCategory": "Sierra Leone",
+  "@sleInCountryCategory": {
+    "description": "sleInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "smrInCountryCategory": "San Marino",
+  "@smrInCountryCategory": {
+    "description": "smrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "senegalInCountryCategory": "Senegal",
+  "@senegalInCountryCategory": {
+    "description": "senegalInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "somaliaInCountryCategory": "Somalia",
+  "@somaliaInCountryCategory": {
+    "description": "somaliaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "surinameInCountryCategory": "Suriname",
+  "@surinameInCountryCategory": {
+    "description": "surinameInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ssdInCountryCategory": "South Sudan",
+  "@ssdInCountryCategory": {
+    "description": "ssdInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "stpInCountryCategory": "Sao Tome and Principe",
+  "@stpInCountryCategory": {
+    "description": "stpInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slvInCountryCategory": "El Salvador",
+  "@slvInCountryCategory": {
+    "description": "slvInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "syrInCountryCategory": "Syrian Arab Republic",
+  "@syrInCountryCategory": {
+    "description": "syrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "swzInCountryCategory": "Kindom of Eswatini",
+  "@swzInCountryCategory": {
+    "description": "swzInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chadInCountryCategory": "Chad",
+  "@chadInCountryCategory": {
+    "description": "chadInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "togoInCountryCategory": "Togo",
+  "@togoInCountryCategory": {
+    "description": "togoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "thailandInCountryCategory": "Thailand",
+  "@thailandInCountryCategory": {
+    "description": "thailandInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tajikistanInCountryCategory": "Tajikistan",
+  "@tajikistanInCountryCategory": {
+    "description": "tajikistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tlsInCountryCategory": "Timor-Leste",
+  "@tlsInCountryCategory": {
+    "description": "tlsInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "turkmenistanInCountryCategory": "Turkmenistan",
+  "@turkmenistanInCountryCategory": {
+    "description": "turkmenistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tunisiaInCountryCategory": "Tunisia",
+  "@tunisiaInCountryCategory": {
+    "description": "tunisiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tongaInCountryCategory": "Tonga",
+  "@tongaInCountryCategory": {
+    "description": "tongaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "turkeyInCountryCategory": "Turkey",
+  "@turkeyInCountryCategory": {
+    "description": "turkeyInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ttoInCountryCategory": "Trinidad and Tobago",
+  "@ttoInCountryCategory": {
+    "description": "ttoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tuvaluInCountryCategory": "Tuvalu",
+  "@tuvaluInCountryCategory": {
+    "description": "tuvaluInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "taiwanInCountryCategory": "Taiwan",
+  "@taiwanInCountryCategory": {
+    "description": "taiwanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tzaInCountryCategory": "United Republic of Tanzania",
+  "@tzaInCountryCategory": {
+    "description": "tzaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ukrInCountryCategory": "Ukraine",
+  "@ukrInCountryCategory": {
+    "description": "ukrInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ugaInCountryCategory": "Uganda",
+  "@ugaInCountryCategory": {
+    "description": "ugaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "usaInCountryCategory": "United States",
+  "@usaInCountryCategory": {
+    "description": "usaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "uruguayInCountryCategory": "Uruguay",
+  "@uruguayInCountryCategory": {
+    "description": "uruguayInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "uzbekistanInCountryCategory": "Uzbekistan",
+  "@uzbekistanInCountryCategory": {
+    "description": "uzbekistanInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vatInCountryCategory": "Holy See (Vatican City State)",
+  "@vatInCountryCategory": {
+    "description": "vatInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vctInCountryCategory": "Saint Vincent and the Grenadines",
+  "@vctInCountryCategory": {
+    "description": "vctInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "venInCountryCategory": "Bolivarian Republic of Venezuela",
+  "@venInCountryCategory": {
+    "description": "venInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vietnamInCountryCategory": "Vietnam",
+  "@vietnamInCountryCategory": {
+    "description": "vietnamInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vanuatuInCountryCategory": "Vanuatu",
+  "@vanuatuInCountryCategory": {
+    "description": "vanuatuInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kosovoInCountryCategory": "Kosovo",
+  "@kosovoInCountryCategory": {
+    "description": "kosovoInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "samoaInCountryCategory": "Samoa",
+  "@samoaInCountryCategory": {
+    "description": "samoaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "yemenInCountryCategory": "Yemen",
+  "@yemenInCountryCategory": {
+    "description": "yemenInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zafInCountryCategory": "South Africa",
+  "@zafInCountryCategory": {
+    "description": "zafInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zambiaInCountryCategory": "Zambia",
+  "@zambiaInCountryCategory": {
+    "description": "zambiaInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "zimbabweInCountryCategory": "Zimbabwe",
+  "@zimbabweInCountryCategory": {
+    "description": "zimbabweInCountryCategory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "notFoundForSearchResult": "not found",
+  "@notFoundForSearchResult": {
+    "description": "notFoundForSearchResult",
+    "type": "text",
+    "placeholders": {}
+  }
+}
