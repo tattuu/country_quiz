@@ -34,6 +34,8 @@ class _SpinKitWaveState extends State<SpinKitWave>
     with SingleTickerProviderStateMixin {
   AnimationController _scaleCtrl;
 
+  double  _size;
+
   @override
   void initState() {
     super.initState();
@@ -91,7 +93,7 @@ class _SpinKitWaveState extends State<SpinKitWave>
   }
 
   Widget _bar(int index, double delay) {
-    final _size = widget.size * 0.115;
+    _size = widget.size * 0.115;
     return ScaleYWidget(
       scaleY: DelayTween(
         begin: .2,
@@ -110,7 +112,7 @@ class _SpinKitWaveState extends State<SpinKitWave>
         ? widget.itemBuilder(context, index)
         : DecoratedBox(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.0),
+        borderRadius: BorderRadius.circular( _size / 2),
         color: widget.color,
       ),
     );

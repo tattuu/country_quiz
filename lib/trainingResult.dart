@@ -152,45 +152,47 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
           ..pop()
           ..pop();
       },
-      child: DefaultTabController(
-      length: tabs.length,
-        child: Scaffold(
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            flexibleSpace: SafeArea(
-              child: TabBar(
-                labelColor: Colors.white,
-                indicatorColor: Colors.blueAccent,
-                labelStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+      child: SafeArea(
+        child: DefaultTabController(
+        length: tabs.length,
+          child: Scaffold(
+            appBar: AppBar(
+              automaticallyImplyLeading: false,
+              flexibleSpace: SafeArea(
+                child: TabBar(
+                  labelColor: Colors.white,
+                  indicatorColor: Colors.blueAccent,
+                  labelStyle: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  indicatorSize: TabBarIndicatorSize.tab,
+  //                indicatorPadding: EdgeInsets.only(bottom: 100),
+                  indicatorWeight: 10,
+  //                indicator: BoxDecoration(
+  //                  color: Colors.blue,
+  //                  borderRadius: BorderRadius.circular(30),
+  //                ),
+  //                indicatorSize: ,
+                  tabs: tabs,
                 ),
-                indicatorSize: TabBarIndicatorSize.tab,
-//                indicatorPadding: EdgeInsets.only(bottom: 100),
-                indicatorWeight: 10,
-//                indicator: BoxDecoration(
-//                  color: Colors.blue,
-//                  borderRadius: BorderRadius.circular(30),
-//                ),
-//                indicatorSize: ,
-                tabs: tabs,
               ),
             ),
-          ),
-          floatingActionButton: UnicornDialer(
-              backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
-              parentButtonBackground: Colors.pink,
-              orientation: UnicornOrientation.VERTICAL,
-              parentButton: Icon(
-                Icons.add,
-              ),
-              childPadding: 5.0,
-              childButtons: childButtons),
+            floatingActionButton: UnicornDialer(
+                backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
+                parentButtonBackground: Colors.pink,
+                orientation: UnicornOrientation.VERTICAL,
+                parentButton: Icon(
+                  Icons.add,
+                ),
+                childPadding: 5.0,
+                childButtons: childButtons),
 
-          body: TabBarView(children: [
-            knowListView,
-            unKnowListView,
-          ]),
+            body: TabBarView(children: [
+              knowListView,
+              unKnowListView,
+            ]),
+          ),
         ),
       ),
     );

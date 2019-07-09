@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:country_quiz/top_page.dart'; // トップページをインポート
 import 'package:country_quiz/l10n/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:rxdart/rxdart.dart';
-
 
 void main() => runApp(MyApp()); // エンドポイント(MyAppを実行する)
 

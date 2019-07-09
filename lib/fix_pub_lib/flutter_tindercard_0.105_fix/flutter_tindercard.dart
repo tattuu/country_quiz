@@ -285,7 +285,6 @@ class _TinderSwapCardState extends State<TinderSwapCard>
             ),
             color: Colors.grey[200],
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Container(
                   height: 40,
@@ -298,11 +297,12 @@ class _TinderSwapCardState extends State<TinderSwapCard>
                 ),
                 Spacer(),
                 Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 10, right: MediaQuery.of(context).size.width / 10),
                   child: Text(
                     _countryName,
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: MediaQuery.of(context).size.width / 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -337,13 +337,13 @@ class _TinderSwapCardState extends State<TinderSwapCard>
     if (_ratioOfPositionX < 0.1) {
       return Icon(
         Icons.help_outline,
-        size: 80.0,
+        size: MediaQuery.of(context).size.width / 4,
         color: Colors.cyanAccent[400],
       );
     } else {
       return Icon(
         Icons.panorama_fish_eye,
-        size: 80.0,
+        size: MediaQuery.of(context).size.width / 4,
         color: Colors.orange,
       );
     }

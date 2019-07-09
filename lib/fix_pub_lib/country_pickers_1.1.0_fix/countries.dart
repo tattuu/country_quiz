@@ -470,8 +470,8 @@ List<Country> countryList(BuildContext context) {
     Country(
       continents: [L10n.of(context).africaForSearchCategory], isoCode: "EG",
       phoneCode: "20",
-      name: "Egypt",
-      nameForJpSearch: L10n.of(context).egyptInCountryCategory,
+      name: L10n.of(context).egyptInCountryCategory,
+      nameForJpSearch: "エジプト",
       iso3Code: "EGY",
     ),
 //  Country(

@@ -19,10 +19,10 @@ class _TestPageState extends State<TestPage> {
   int _counter;
   var _percent;
   final double selectButtonPadding = 0;
-  final double _selectButtonShape = 30;
+  double _selectButtonShape = 30;
   var _winOpacity = 1.0;
   Image _resultFace;
-  Set<Country> _oneQuestionMap = Set();
+  List<Country> _oneQuestionList = [];
   List<dynamic> _selectButtonContentList;
   Country _questionViewCountry;
   dynamic _questionViewContent;
@@ -30,19 +30,51 @@ class _TestPageState extends State<TestPage> {
   List<Country> _unKnowList = [];
   bool _questionFormat = true;
   var random;
+  double selectButtonTextSize = 20;
+  double questionViewPadding = 20;
+  double selectButton1FieldHeightSize;
+  double selectButton2FieldHeightSize;
 
 
   void _getQuestionCountry() {
     setState(() {
-      _oneQuestionMap.clear();
+      _oneQuestionList.clear();
       _questionFormat = random.nextInt(2) == 0 ? true : false;
 
       for (int i = 0; i < 4; i++) {
-        while(i == _oneQuestionMap.length) {
-          _oneQuestionMap.add(countryList(context)[random.nextInt(countryList(context).length)]);
+        while(i == _oneQuestionList.length) {
+          var keep = countryList(context)[random.nextInt(countryList(context).length)];
+
+          var combineCheck = false;
+          _knowList.forEach((country) {
+            if (country.name == keep.name) {
+              print("b");
+              print(keep.name);
+              combineCheck = true;
+            }
+          });
+          _unKnowList.forEach((country) {
+            if (country.name == keep.name) {
+              print("c");
+              print(keep.name);
+              combineCheck = true;
+            }
+          });
+
+          _oneQuestionList.forEach((_oneQuestion) {
+            if (_oneQuestion.name == keep.name) {
+              print("a");
+              print(keep.name);
+              combineCheck = true;
+            }
+          });
+
+          if (!combineCheck) {
+            _oneQuestionList.add(keep);
+          }
         }
       }
-      _selectButtonContentList = _oneQuestionMap.toList();
+      _selectButtonContentList = _oneQuestionList.toList();
       _questionViewCountry = _selectButtonContentList[random.nextInt(_selectButtonContentList.length)];
       if (!_questionFormat) {
         _questionViewContent = Image.asset(CountryPickerUtils.getFlagImageAssetPath(_questionViewCountry.isoCode));
@@ -52,7 +84,7 @@ class _TestPageState extends State<TestPage> {
           child: Text(
             _questionViewCountry.name,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: MediaQuery.of(context).size.width / 12,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -82,82 +114,146 @@ class _TestPageState extends State<TestPage> {
 
     switch(_knowList.length) {
       case 0: {
-        _resultFace = Image.asset('assets/resultFace/0.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/0.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 1: {
-        _resultFace = Image.asset('assets/resultFace/1.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/1.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 2: {
-        _resultFace = Image.asset('assets/resultFace/2.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/2.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 3: {
-        _resultFace = Image.asset('assets/resultFace/3.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/3.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 4: {
-        _resultFace = Image.asset('assets/resultFace/4.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/4.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 5: {
-        _resultFace = Image.asset('assets/resultFace/5.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/5.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 6: {
-        _resultFace = Image.asset('assets/resultFace/6.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/6.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 7: {
-        _resultFace = Image.asset('assets/resultFace/7.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/7.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 8: {
-        _resultFace = Image.asset('assets/resultFace/8.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/8.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 9: {
-        _resultFace = Image.asset('assets/resultFace/9.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/9.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 10: {
-        _resultFace = Image.asset('assets/resultFace/10.png');
+        _resultFace = Image.asset(
+          'assets/resultFace/10.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 11: {
-        _resultFace = Image.asset('assets/resultFace/11.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/11.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 12: {
-        _resultFace = Image.asset('assets/resultFace/12.png');
+        _resultFace = Image.asset(
+          'assets/resultFace/12.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 13: {
-        _resultFace = Image.asset('assets/resultFace/13.png');
+        _resultFace = Image.asset(
+            'assets/resultFace/13.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 14: {
-        _resultFace = Image.asset('assets/resultFace/14.png');
+        _resultFace = Image.asset(
+          'assets/resultFace/14.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
       case 15: {
-        _resultFace = Image.asset('assets/resultFace/15.png');
+        _resultFace = Image.asset(
+          'assets/resultFace/15.png',
+          height: MediaQuery.of(context).size.width / 3,
+          fit: BoxFit.fill,
+        );
       }
       break;
 
@@ -178,7 +274,7 @@ class _TestPageState extends State<TestPage> {
             'Fin!',
             style: TextStyle(
               color: Colors.orange,
-              fontSize: MediaQuery.of(context).size.width / 2,
+              fontSize: MediaQuery.of(context).size.width / 3,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -190,12 +286,11 @@ class _TestPageState extends State<TestPage> {
             height: 50,
           ),
           Container(
-            alignment: Alignment.topRight,
-            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width / 3),
+            alignment: Alignment.center,
             child: Text(
               '${_knowList.length.toString()}/$_questionCount',
               style: TextStyle(
-                fontSize: 50,
+                fontSize: MediaQuery.of(context).size.width / 10,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -227,24 +322,40 @@ class _TestPageState extends State<TestPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width < 480) {
+      _selectButtonShape = 30;
+      selectButtonTextSize = 20;
+      questionViewPadding = 20;
+      selectButton1FieldHeightSize = MediaQuery.of(context).size.height / 11.85;
+      selectButton2FieldHeightSize = MediaQuery.of(context).size.height / 5.121;
+    } else if (MediaQuery.of(context).size.width < 960) {
+      _selectButtonShape = 60;
+      selectButtonTextSize = 30;
+      questionViewPadding = 40;
+      selectButton1FieldHeightSize = MediaQuery.of(context).size.height / 10.5;
+      selectButton2FieldHeightSize = MediaQuery.of(context).size.height / 4.83;
+    }
+
     return WillPopScope(
       onWillPop: () {
         Navigator.of(context)
           ..pop()..pop();
       },
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: <Widget>[
-            Opacity(
-              opacity: _winOpacity == 1.0 ? 0.0 : 1.0,
-              child: _finDisplay(),
-            ),
-            Opacity(
-              opacity: _winOpacity,
-              child: _questionFormat == true ?  _battlePage2(context) : _battlePage1(context),
-            ),
-          ],
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Stack(
+            children: <Widget>[
+              Opacity(
+                opacity: _winOpacity == 1.0 ? 0.0 : 1.0,
+                child: _finDisplay(),
+              ),
+              Opacity(
+                opacity: _winOpacity,
+                child: _questionFormat == true ?  _battlePage2(context) : _battlePage1(context),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -253,7 +364,7 @@ class _TestPageState extends State<TestPage> {
   Widget _progressBar(BuildContext context) {
     return  Container(
       width: MediaQuery.of(context).size.width - 5,
-      margin: EdgeInsets.only(top: 50, bottom: 10),
+      margin: EdgeInsets.only(top: 20, bottom: 10),
       padding: EdgeInsets.only(left: 10, right: 10),
 
       child:Container(
@@ -283,8 +394,8 @@ class _TestPageState extends State<TestPage> {
   Widget _questionView(BuildContext context) {
     return  Container(
       height: MediaQuery.of(context).size.height / 2.5,
-      width: MediaQuery.of(context).size.width ,
-      padding: EdgeInsets.all(20),
+      width: MediaQuery.of(context).size.width,
+      padding: EdgeInsets.all(questionViewPadding),
 //      color: Colors.orange,
       child: Card(
         color: Colors.grey[100],
@@ -334,14 +445,14 @@ class _TestPageState extends State<TestPage> {
           elevation: 7,
           child: Container(
             width: MediaQuery.of(context).size.width / 1.05,
-            height: MediaQuery.of(context).size.height / 11.85,
+            height: selectButton1FieldHeightSize,
             padding: EdgeInsets.only(left: 10, right: 10),
             child: Center(
               child: Text(
                 country.name,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: selectButtonTextSize,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -354,7 +465,8 @@ class _TestPageState extends State<TestPage> {
 
   Widget _selectButtonBase2(BuildContext context, Country country) {
     return Container(
-      padding: EdgeInsets.only(top: 8, left: 10, right: 0),
+      padding: EdgeInsets.only(top: 8, left: 2, right: 2),
+      width: MediaQuery.of(context).size.width / 2,
       child: GestureDetector(
         onTap: () {
           setState(() {
@@ -384,10 +496,7 @@ class _TestPageState extends State<TestPage> {
           ),
           elevation: 7,
           child: Container(
-            height: MediaQuery
-                .of(context)
-                .size
-                .height / 5.121,
+            height: selectButton2FieldHeightSize,
             width: MediaQuery
                 .of(context)
                 .size
@@ -428,7 +537,6 @@ class _TestPageState extends State<TestPage> {
         _questionView(context),
         Container(
           height: MediaQuery.of(context).size.height / 2.2,
-//          color: Colors.blue,
           child: Column(
             children: <Widget>[
               Row(

@@ -13,6 +13,8 @@ class TopPage extends StatelessWidget { // トップページに関するウィ�
 
   List<Country> _countryImageNames = [];
   List<Image> _countryImageWidget = [];
+  double firstFontSize;
+  double secondFontSize;
 
   void _setImageCache(BuildContext context) {
     _countryImageNames = countryList(context).where(acceptAllCountries).toList();
@@ -32,6 +34,15 @@ class TopPage extends StatelessWidget { // トップページに関するウィ�
 
     _setImageCache(context);
 
+    if (MediaQuery.of(context).size.width < 480) {
+      firstFontSize = 90;
+      secondFontSize = 90;
+    } else if (MediaQuery.of(context).size.width < 960) {
+      firstFontSize = 190;
+      secondFontSize = 180;
+    }
+
+
     return Stack(
       children: <Widget>[
         Opacity(
@@ -49,8 +60,8 @@ class TopPage extends StatelessWidget { // トップページに関するウィ�
           secondIconData: IconData(0xe800, fontFamily: 'IconDumbbellAndBarbell'),
           firstWidget: CountryList(),
           secondWidget: SelectBattlePage(),
-          firstFontSize: 90.0,
-          secondFontSize: 90.0,
+          firstFontSize: firstFontSize,
+          secondFontSize: secondFontSize,
           iconColor: Colors.tealAccent[700],
         ),
       ]

@@ -15,7 +15,7 @@ class CountDown extends AnimatedWidget {
       animation.value.toString(),
       style: TextStyle(
         color: color,
-        fontSize: 250,
+        fontSize:  MediaQuery.of(context).size.width / 1.5,
       ),
     );
   }
@@ -67,27 +67,29 @@ class _CountDownPageState extends State<CountDownPage>  with TickerProviderState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: widget.backgroundColor,
-      body: Center(
-        child: Stack(
-//          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SpinKitWave(
-              color: widget.barColor,
-              size: 250,
-              duration: Duration(milliseconds: 1000),
-            ),
-            Center(
-              child: CountDown(
-                color: widget.charColor,
-                animation: StepTween(
-                  begin: counter,
-                  end: 0,
-                ).animate(_controller)
-                ..addStatusListener((state) => _navigateToConverter(context, widget.widget)),
+      body: SafeArea(
+        child: Center(
+          child: Stack(
+  //          mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SpinKitWave(
+                color: widget.barColor,
+                size: MediaQuery.of(context).size.width -  MediaQuery.of(context).size.width / 15,
+                duration: Duration(milliseconds: 1000),
               ),
-            ),
-          ],
-          fit: StackFit.expand,
+              Center(
+                child: CountDown(
+                  color: widget.charColor,
+                  animation: StepTween(
+                    begin: counter,
+                    end: 0,
+                  ).animate(_controller)
+                  ..addStatusListener((state) => _navigateToConverter(context, widget.widget)),
+                ),
+              ),
+            ],
+            fit: StackFit.expand,
+          ),
         ),
       ),
     );

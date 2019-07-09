@@ -16,30 +16,37 @@ class _MainSearchDialog extends State<MainSearchDialog>{
   var countryFlagNames = <Country>[];
   final searchResults = <String>[];
   var continentTag;
+  double tagRadius;
+  double tagBorderSize;
+  double tagFontSize;
 
   final _tagColor = [];
 
   Country _selectedDialogCountry;
 //    CountryPickerUtils.getCountryByIsoCode('JP');
 
-  dynamic _listTileSet = Text('Search...');
+  dynamic _listTileSet = "Search";
 
   @override
   void initState() {
 
+
     _selectedDialogCountry = null;
+
     super.initState();
   }
 
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    _listTileSet = Text(
-      '${L10n.of(context).search}...',
-      style: TextStyle(
-        fontSize: 20.0,
-      ),
-    );
+    if (_listTileSet == "Search") {
+      _listTileSet = Text(
+        '${L10n.of(context).search}...',
+        style: TextStyle(
+          fontSize: tagFontSize,
+        ),
+      );
+    }
 
     continentTag = [
       L10n.of(context).asiaForSearchCategory,
@@ -53,16 +60,15 @@ class _MainSearchDialog extends State<MainSearchDialog>{
     for (var i = 0; i < continentTag.length; i++) {
       _tagColor.add({continentTag[i]: [Colors.black, Colors.white]});
     }
-
-
   }
 
   Widget _oneTag(String tagName, int setNum) =>
       Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(tagRadius),
           border: Border.all(
-            width: 2.0,
+//            width: MediaQuery.of(context).size.width / 120,
+            width: tagBorderSize,
           color: _tagColor[setNum][tagName][0],
           ),
           color: _tagColor[setNum][tagName][1],
@@ -81,7 +87,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
                   _listTileSet = Text(
                     '${L10n.of(context).search}...',
                     style: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: tagFontSize * 1.2,
                     ),
                   );
                 });
@@ -112,6 +118,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
               style: TextStyle(
                 color: _tagColor[setNum][tagName][0],
                 fontWeight: FontWeight.w300,
+                fontSize: tagFontSize,
               ),
             ),
           ),
@@ -222,6 +229,16 @@ class _MainSearchDialog extends State<MainSearchDialog>{
 
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width < 480) {
+      tagBorderSize = MediaQuery.of(context).size.width / 180;
+      tagRadius = MediaQuery.of(context).size.width / 15;
+      tagFontSize = 15.0;
+    } else if (MediaQuery.of(context).size.width < 960) {
+      tagBorderSize = MediaQuery.of(context).size.width / 120;
+      tagRadius = MediaQuery.of(context).size.width / 20;
+      tagFontSize = 20.0;
+
+    }
     return SimpleDialog(
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
@@ -240,7 +257,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{
                 ),
                 IconButton(
                     icon: Icon(Icons.done_outline),
-                    iconSize: 35,
+                    iconSize: MediaQuery.of(context).size.width / 10,
                     onPressed: () {
                       if (searchResults.length != 0) {
                         setState(() {

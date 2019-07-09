@@ -54,16 +54,8 @@ class CountryListState extends State<CountryList> {
     }
   }
 
-  _scrollToTop() {
-    _scrollController.animateTo(
-        _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1),
-        curve: Curves.easeIn);
-  }
-
   Future<void> retrieveCountryList() async {
     setState(() {
-      _scrollToTop();
       categories.clear();
       countryFlagNames.forEach((countryFlagName) {
         categories.add(CreateOneCountryColumn(
@@ -82,6 +74,13 @@ class CountryListState extends State<CountryList> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
+  }
+
+  _scrollToTop() {
+    _scrollController.animateTo(
+        _scrollController.position.minScrollExtent,
+        duration: Duration(milliseconds: 1),
+        curve: Curves.easeIn);
   }
 
   Widget _buildCategoryWidgets(List<Widget> categories) {
@@ -119,6 +118,7 @@ class CountryListState extends State<CountryList> {
             if (countryFlagNames == null){
               countryFlagNames = keepCountryFlagNames;
             }
+            _scrollToTop();
             retrieveCountryList();
           });
         },
@@ -162,18 +162,20 @@ class CountryListState extends State<CountryList> {
       child: _buildCategoryWidgets(categories),
     );
 
-    return Scaffold(
-      floatingActionButton: UnicornDialer(
-          backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
-          parentButtonBackground: Colors.pink,
-          orientation: UnicornOrientation.VERTICAL,
-          parentButton: Icon(
-            Icons.add,
-          ),
-          childPadding: 5.0,
-          childButtons: childButtons),
+    return SafeArea(
+        child: Scaffold(
+        floatingActionButton: UnicornDialer(
+            backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
+            parentButtonBackground: Colors.pink,
+            orientation: UnicornOrientation.VERTICAL,
+            parentButton: Icon(
+              Icons.add,
+            ),
+            childPadding: 5.0,
+            childButtons: childButtons),
 
-      body: listView,
+        body: listView,
+        ),
     );
   }
 }

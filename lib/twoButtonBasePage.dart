@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_quiz/copyrightAttribution.dart';
+import 'package:country_quiz/l10n/l10n.dart';
 
 class TwoButtonBasePage extends StatelessWidget {
   final String title;
@@ -12,6 +13,12 @@ class TwoButtonBasePage extends StatelessWidget {
   final double firstFontSize;
   final double secondFontSize;
   final Color iconColor;
+
+  double iconSizeHeight;
+  double iconSizeWidth;
+  double iconFontSize;
+  double textFontSize;
+
 
 
   TwoButtonBasePage({
@@ -36,7 +43,7 @@ class TwoButtonBasePage extends StatelessWidget {
   }
 
   Widget _copyrightDisplay(BuildContext context) {
-    if (title == 'Challenge') {
+    if (title == L10n.of(context).challenge) {
       return Container(
         height: 40,
         width: 40,
@@ -58,10 +65,10 @@ class TwoButtonBasePage extends StatelessWidget {
 
   Widget _iconLogo(BuildContext context, IconData icon, Widget widget, double fontSize, Color iconColor) { // アイコンに関するウィジェット
     return ClipRRect( // 円形に関するウィジェット
-      borderRadius: BorderRadius.circular(75.0), // 円形にする
+      borderRadius: BorderRadius.circular(iconSizeWidth / 2), // 円形にする
       child: Container(
-        height: 150,
-        width: 150,
+        height: iconSizeHeight,
+        width: iconSizeWidth,
         color: iconColor,
         child: Center(
           child: IconButton(
@@ -81,8 +88,8 @@ class TwoButtonBasePage extends StatelessWidget {
       child: Text( // 文字に関するウィジェット
         name,
         style: TextStyle(
-          color: Colors.black,
-          fontSize: 40,
+          color: Colors.grey[700],
+          fontSize: textFontSize,
           fontWeight: FontWeight.bold, // 太字
         ),
       ),
@@ -91,6 +98,18 @@ class TwoButtonBasePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width < 480) {
+      iconSizeHeight = 150;
+      iconSizeWidth = 150;
+      iconFontSize = 90;
+      textFontSize = 40;
+    } else if (MediaQuery.of(context).size.width < 960) {
+      iconSizeHeight = 300;
+      iconSizeWidth = 300;
+      iconFontSize = 180;
+      textFontSize = 80;
+    }
+
     return Scaffold( // 足場に関するウィジェット
       appBar: AppBar(
         iconTheme: IconThemeData(
@@ -107,20 +126,22 @@ class TwoButtonBasePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: _copyrightDisplay(context),
-      body: Center(
-        child: Column( // 縦の行
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[ // Spacer()は、空白の比率
-            Spacer(flex: 10),
-            _iconLogo(context, firstIconData, firstWidget, firstFontSize, iconColor), // 画像をアイコンとして生成して、iconLogoに渡す
-            Spacer(),
-            _iconName(context, firstButtonName, firstWidget), // アイコン下の文字に関する処理
-            Spacer(flex: 15),
-            _iconLogo(context, secondIconData, secondWidget, secondFontSize, iconColor),
-            Spacer(),
-            _iconName(context, secondButtonName, secondWidget),
-            Spacer(flex: 10),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Column( // 縦の行
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[ // Spacer()は、空白の比率
+              Spacer(flex: 10),
+              _iconLogo(context, firstIconData, firstWidget, firstFontSize, iconColor), // 画像をアイコンとして生成して、iconLogoに渡す
+              Spacer(),
+              _iconName(context, firstButtonName, firstWidget), // アイコン下の文字に関する処理
+              Spacer(flex: 15),
+              _iconLogo(context, secondIconData, secondWidget, secondFontSize, iconColor),
+              Spacer(),
+              _iconName(context, secondButtonName, secondWidget),
+              Spacer(flex: 10),
+            ],
+          ),
         ),
       ),
     );

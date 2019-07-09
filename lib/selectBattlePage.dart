@@ -10,8 +10,19 @@ import 'package:country_quiz/l10n/l10n.dart';
 class SelectBattlePage extends StatelessWidget {
   // トップページに関するウィジェット
 
+  double firstFontSize;
+  double secondFontSize;
+
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width < 480) {
+      firstFontSize = 100;
+      secondFontSize = 90;
+    } else if (MediaQuery.of(context).size.width < 960) {
+      firstFontSize = 190;
+      secondFontSize = 180;
+    }
+
     return TwoButtonBasePage(
       title: L10n.of(context).challenge,
       firstButtonName: L10n.of(context).training,
@@ -30,8 +41,8 @@ class SelectBattlePage extends StatelessWidget {
           barColor: Colors.blue[600],
           charColor: Colors.orange,
       ),
-      firstFontSize: 100.0,
-      secondFontSize: 90.0,
+      firstFontSize: firstFontSize,
+      secondFontSize: secondFontSize,
       iconColor: Colors.blue[600],
     );
   }
