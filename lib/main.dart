@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:country_quiz/top_page.dart'; // トップページをインポート
 import 'package:country_quiz/l10n/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp()); // エンドポイント(MyAppを実行する)
+void main() {
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+} // エンドポイント(MyAppを実行する)
 
 class MyApp extends StatelessWidget {
   // 状態を管理しない
