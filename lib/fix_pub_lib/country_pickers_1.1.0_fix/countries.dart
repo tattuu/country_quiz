@@ -136,7 +136,7 @@ List<Country> countryList(BuildContext context) {
       continents: [L10n.of(context).northAmericaForSearchCategory], isoCode: "BB",
       phoneCode: "1-246",
       name: L10n.of(context).barbadosInCountryCategory,
-      nameForJpSearch: "",
+      nameForJpSearch: "バルバドス",
       iso3Code: "BRB",
     ),
     Country(
