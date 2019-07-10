@@ -7,7 +7,7 @@ class FinPage extends StatelessWidget { // テスト完了ページ(テストペ
 
   FinPage({this.knowListCount, this.questionCount}); // コンストラクタ
 
-  String _resultFaceImagePath() { // 正解数に応じたフェイス画像を選んで返す
+  String resultFaceImagePath() { // 正解数に応じたフェイス画像を選んで返す
     switch (knowListCount) {
       case 0:
         {return 'assets/resultFace/0.png';}
@@ -94,7 +94,7 @@ class FinPage extends StatelessWidget { // テスト完了ページ(テストペ
             height: 10,
           ),
           Image.asset( // フェイス画像表示
-            _resultFaceImagePath(),
+            resultFaceImagePath(),
             height: MediaQuery
                 .of(context)
                 .size

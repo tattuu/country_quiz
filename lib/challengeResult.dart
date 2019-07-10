@@ -44,7 +44,7 @@ class _ChallengeResultState extends State<ChallengeResult> with TickerProviderSt
       ),
     ];
 
-    if (knowCountryWidgetColumn.isEmpty) {
+    if (knowCountryWidgetColumn.isEmpty && unKnowCountryWidgetColumn.isEmpty) { //
       await retrieveCountryList();
     }
   }
