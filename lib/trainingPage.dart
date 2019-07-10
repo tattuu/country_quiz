@@ -4,9 +4,9 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/countries.dar
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/typedefs.dart';
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart';
 import 'package:country_quiz/fix_pub_lib/flutter_tindercard_0.105_fix/flutter_tindercard.dart';
-import 'package:country_quiz/trainingResult.dart';
+import 'package:country_quiz/challengeResult.dart';
 
-class TrainingPage extends StatefulWidget {
+class TrainingPage extends StatefulWidget { // Trainingページに関するステートフルなクラス
 
   @override
   _TrainingPageState createState() => _TrainingPageState();
@@ -14,27 +14,28 @@ class TrainingPage extends StatefulWidget {
 
 class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMixin {
 
-  List<Country> _countryImageNames = [];
-  List<Image> _countryImageWidget = [];
-  int _counter = 1;
-  List<Country> _knowList = [];
-  List<Country> _unKnowList = [];
+  List<Country> _countryList = []; // 
+  List<Image> _countryImageWidgetList = []; //
 
+  List<Country> _knowList = []; // 知っている国として分類された国を追加するためのリスト
+  List<Country> _unKnowList = []; // 知っていない国として分類された国を追加するためのリスト
+  int _counter = 1; // 現在スライドしようとしている国の数のカウンター
+  
   @override
-  void initState() {
-
+  void initState() { // 初期化メソッド
     super.initState();
   }
 
   @override
-  void didChangeDependencies() {
+  void didChangeDependencies() { // initState()メソッドの後に実行されるメソッド
     super.didChangeDependencies();
-    _countryImageNames = countryList(context).where(acceptAllCountries).toList();
+    _countryList = countryList(context).where(acceptAllCountries).toList(); // countries.dartに入っている全部の国のリストを代入
 
-//    countryList.forEach((country) {
-    _countryImageNames.forEach((country) {
-      _countryImageWidget.add(
-        Image.asset(CountryPickerUtils.getFlagImageAssetPath(country.isoCode)),
+    _countryList.forEach((country) { // 各国の画像データを_countryImageWidgetListに追加
+      _countryImageWidgetList.add( // 画像ウィジェットを追加
+        Image.asset( // 画像ウィジェットを生成
+          CountryPickerUtils.getFlagImageAssetPath(country.isoCode) // 画像イメージパスを呼び出す
+        ),
       );
     });
   }
@@ -42,8 +43,8 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
   @override
   Widget build(BuildContext context) {
 
-    return WillPopScope(
-      onWillPop: () {
+    return WillPopScope( // 端末の戻るボタンを押した場合の処理
+      onWillPop: () { // challengeページに移動する
         Navigator.of(context)
             ..pop()
             ..pop();
@@ -57,60 +58,54 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
                 Container(
                   height: 20,
                 ),
-                Stack(
+                Stack( // Stackの形にして、Tinderカードを最前面にし、他のウィジェットと重なった時に、それ以外のウィジェットより上にカードを表示するようにする
                   children: <Widget>[
-                    Container(
+                    Container( // 現在までの表示国数の割合
                       alignment: Alignment.center,
                       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 1.17),
                       child: Text(
-                        '$_counter' + '/' + _countryImageNames.length.toString(),
+                        '$_counter' + '/' + _countryList.length.toString(), // 割合表示の本体
                         style: TextStyle(
                           fontSize: MediaQuery.of(context).size.width / 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.only(top: 0),
+                    Container( // Tinderカードに関するウィジェット
                       height: MediaQuery.of(context).size.height * 0.78,
                       child: TinderSwapCard(
                         orientation: AmassOrientation.TOP,
-                        totalNum: _countryImageNames.length,
-                        stackNum: 5,
+                        totalNum: _countryList.length, // 全カード枚数
+                        stackNum: 5, // 重ねて表示するカード枚数
                         maxWidth: MediaQuery.of(context).size.width * 0.9,
                         maxHeight: MediaQuery.of(context).size.width * 0.9,
                         minWidth: MediaQuery.of(context).size.width * 0.8,
                         minHeight: MediaQuery.of(context).size.width * 0.8,
-                        countryNames: _countryImageNames,
-                        countryImageWidgets: _countryImageWidget,
-                        cardBuilder: (context, index) => _insideCard(index),
-                        swipeCompleteCallback: (CardSwipeOrientation orientation, int index){
+                        countryImageWidgets: _countryImageWidgetList, // Tinderカード化する要素の中の画像が入ったリスト
+                        countryNames: _countryList, // Tinderカード化する要素の中の名前が入ったリスト
+                        cardBuilder: (context, index) => _insideCard(index), // _insideCardメソッドで作成したTinderカードで表示する要素をBuilderに随時渡していく。
+                        swipeCompleteCallback: (CardSwipeOrientation orientation, int index){ // スワイプの状態をコールバックする
 
-                          if(orientation==CardSwipeOrientation.RIGHT) {
-                            print('RIGHT2');
-                            _knowList.add(_countryImageNames[index]);
-                          } else if(orientation==CardSwipeOrientation.LEFT) {
-                            print('LEFT2');
-                            _unKnowList.add(_countryImageNames[index]);
+                          if(orientation==CardSwipeOrientation.RIGHT) { // スワイプが右に動かされて終了した場合
+                            _knowList.add(_countryList[index]); // 知っている国として、現在カードに表示されている国を、knowリストに追加
+                          } else if(orientation==CardSwipeOrientation.LEFT) { // スワイプが左に動かされて終了した場合
+                            _unKnowList.add(_countryList[index]); // 知っていない国として、現在カードに表示されている国を、unKnowリストに追加
                           }
 
-                          if (index + 1 == _countryImageNames.length) {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) =>
-                                TrainingResult(
+                          if (index + 1 == _countryList.length) { // 最後のカードがスライドされた場合
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => // カードが全部スライドし終わった後、結果表示ページに遷移する
+                                ChallengeResult( // 結果表示ページに関するウィジェット
                                   knowCountryList: _knowList,
                                   unKnowCountryList: _unKnowList,
                                 ),
                             ));
                           }
 
-                          if(orientation==CardSwipeOrientation.RIGHT || orientation==CardSwipeOrientation.LEFT) {
-                            setState(() {
-                              _counter++;
+                          if(orientation==CardSwipeOrientation.RIGHT || orientation==CardSwipeOrientation.LEFT) { // 右か左にスワイプし終わった場合
+                            setState(() { // 以下の値の状態を非同期で変える
+                              _counter++; // これまでに表示しいてる国のカウントをインクリメント
                             });
                           }
-
-                          print(_knowList);
-                          print(_unKnowList);
                         },
                       ),
                     ),
@@ -124,8 +119,8 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
     );
   }
 
-  Widget _insideCard(int index) {
-    return GestureDetector(
+  Widget _insideCard(int index) { // 表示させるカードを作成するメソッド
+    return GestureDetector( // クリックイベントを実装するためのウィジェット
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(
@@ -133,19 +128,19 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
         ),
         color: Colors.grey[200],
         child: Column(
-          //                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Container(
               height: 40,
             ),
-            Container(
+            Container( // 国旗表示部分
               alignment: Alignment.topCenter,
               height: MediaQuery.of(context).size.height/ 3,
               margin: EdgeInsets.only(left: 10, right: 10),
-              child: _countryImageWidget[index],
+              child: _countryImageWidgetList[index],
             ),
             Spacer(),
-            Container(
+            Container( // 国名表示部分
               padding: EdgeInsets.only(left: 15, right: 15),
               child: Text(
                 '',
@@ -159,12 +154,6 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
           ],
         ),
       ),
-//      onTapDown: (detail) {
-//        setState(() {
-//          print(detail);
-//          _countryName = _countryImageName[index].name;
-//        });
-//      }
     );
   }
 }

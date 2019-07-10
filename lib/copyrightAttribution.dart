@@ -2,11 +2,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CopyrightAttributionPage extends StatelessWidget {
+class CopyrightAttributionPage extends StatelessWidget { // 著作権表示ページに関するクラス
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () {
-        Navigator.of(context).pop();
+    return WillPopScope( // スマホ下の戻るボタンを押した場合の処理を記述できるウィジェット
+      onWillPop: () { //
+        Navigator.of(context).pop(); // 1つ前の画面に戻る
       },
       child: Scaffold(
         body: SafeArea(
@@ -21,8 +21,8 @@ class CopyrightAttributionPage extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                RichText(
-                  textAlign: TextAlign.center,
+                RichText( // 高機能テキストウィジェット
+                  textAlign: TextAlign.center, // 中央揃え
                   text: TextSpan(
                     children: [
                       TextSpan(
@@ -32,9 +32,9 @@ class CopyrightAttributionPage extends StatelessWidget {
                       TextSpan(
                         text: 'Streamline UX',
                         style: TextStyle(color: Colors.lightBlue),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            launch('https://www.streamlineicons.com/ux/');
+                        recognizer: TapGestureRecognizer() // クリック処理の追加のための処理
+                          ..onTap = () { // タップ(クリック)検知
+                            launch('https://www.streamlineicons.com/ux/'); // リンク先指定
                           },
                       ),
                       TextSpan(

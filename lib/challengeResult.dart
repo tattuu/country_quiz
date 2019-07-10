@@ -6,43 +6,41 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/country.dart'
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
 import 'package:country_quiz/l10n/l10n.dart';
 
-class TrainingResult extends StatefulWidget {
+class ChallengeResult extends StatefulWidget { // Statefulなウィジェットととして設定
 
-  final List<Country> knowCountryList;
-  final List<Country> unKnowCountryList;
+  final List<Country> knowCountryList; // トレーニングの結果、知っている国として分類した国の一覧が入ったリスト
+  final List<Country> unKnowCountryList; // トレーニングの結果、知っていない国として分類した国の一覧が入ったリスト
 
-  const TrainingResult({this.knowCountryList, this.unKnowCountryList});
+  const ChallengeResult({this.knowCountryList, this.unKnowCountryList});
 
   @override
-  _TrainingResultState createState() => _TrainingResultState();
+  _ChallengeResultState createState() => _ChallengeResultState();
 }
 
-class _TrainingResultState extends State<TrainingResult> with TickerProviderStateMixin{
+class _ChallengeResultState extends State<ChallengeResult> with TickerProviderStateMixin{
 
   ScrollController _scrollController;
-  var knowCountryWidgetColumn = <CreateOneCountryColumn>[];
-  var unKnowCountryWidgetColumn = <CreateOneCountryColumn>[];
-  var tabs;
+  var knowCountryWidgetColumn = <CreateOneCountryColumn>[]; // 知っている国を表示するリストの1列分のウィジェットが表示される
+  var unKnowCountryWidgetColumn = <CreateOneCountryColumn>[]; // 知っていない国を表示するリストの1列分のウィジェットが表示される
+  var tabs; // タブの情報が入る
 
   @override
   void initState() {
     super.initState();
 
-//    _tabController = TabController(length: tabs.length, vsync: this);
-    _scrollController = ScrollController();
-
+    _scrollController = ScrollController(); // リストのスクロールに関するコントローラの設定
   }
 
   @override
   Future<void> didChangeDependencies() async {
     super.didChangeDependencies();
 
-    tabs = <Tab>[
+    tabs = <Tab>[  // タブのリスト
       Tab(
-        text: L10n.of(context).know,
+        text: L10n.of(context).know, // 知っている国の一覧を表示しているページについてのタブ
       ),
       Tab(
-        text: L10n.of(context).unKnow,
+        text: L10n.of(context).unKnow,  // 知っていない国の一覧を表示しているページについてのタブ
       ),
     ];
 
@@ -51,14 +49,13 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
     }
   }
 
-  Future<void> retrieveCountryList() async {
+  Future<void> retrieveCountryList() async { // 知っている国と知っていない国のそれぞれの1列ずつをListに格納するウィジェット
     setState(() {
       knowCountryWidgetColumn.clear();
       widget.knowCountryList.forEach((knowCountry) {
-        knowCountryWidgetColumn.add(CreateOneCountryColumn(
+        knowCountryWidgetColumn.add(CreateOneCountryColumn( // 作成した各国に対するListView内の1列のウィジェットを作成し、リストに追加
           isoCode: knowCountry.isoCode,
           name: knowCountry.name,
-          color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               knowCountry.isoCode),
         ));
@@ -67,7 +64,6 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
         unKnowCountryWidgetColumn.add(CreateOneCountryColumn(
           isoCode: unKnowCountry.isoCode,
           name: unKnowCountry.name,
-          color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               unKnowCountry.isoCode),
         ));
@@ -76,33 +72,33 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
   }
 
   @override
-  void dispose() {
+  void dispose() { // このウィジェットを消して、メモリを開放する
     _scrollController.dispose();
     super.dispose();
   }
 
-  _scrollToTop() {
+  _scrollToTop() { // リストの先頭に移動する
     _scrollController.animateTo(
         _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1),
-        curve: Curves.easeIn);
+        duration: Duration(milliseconds: 1), // 1ミリ秒で先頭に移動
+        curve: Curves.easeIn); // easeInの形式で移動
   }
 
-  Widget _buildCategoryWidgets(List<Widget> categories) {
+  Widget _buildMakeCountryList(List<Widget> countriesColumnList) { // ListViewにする1列の要素が入ったリストから、ListViewを作成する
     return ListView.builder(
       controller: _scrollController,
-      itemBuilder: (BuildContext context, int index) => categories[index],
-      itemCount: categories.length,
+      itemBuilder: (BuildContext context, int index) => countriesColumnList[index],
+      itemCount: countriesColumnList.length,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    var childButtons = List<UnicornButton>();
+    var childButtons = List<UnicornButton>(); // floatingActionButtonに関するボタン
 
-    childButtons.add(UnicornButton(
-      hasLabel: true,
-      labelText: "${L10n.of(context).reload}",
+    childButtons.add(UnicornButton( // floatingActionButtonを作成
+      hasLabel: true, // ラベルを持つ事を許可
+      labelText: "${L10n.of(context).reload}", // ラベルを表示
       currentButton: FloatingActionButton(
         heroTag: null,
         backgroundColor: Colors.amber,
@@ -110,13 +106,13 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
           Icons.refresh,
           size: 40,
         ),
-        onPressed: () {
-          _scrollToTop();
-          retrieveCountryList();
+        onPressed: () { // タップした場合、リストビューを先頭に移動し、
+          _scrollToTop(); // リストの先頭に移動
+//          retrieveCountryList();
         },
       ),
     ));
-    childButtons.add(UnicornButton(
+    childButtons.add(UnicornButton( // 戻るボタンを押したと時の処理
       hasLabel: true,
       labelText: "${L10n.of(context).back}",
       currentButton: FloatingActionButton(
@@ -135,17 +131,17 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
       ),
     ));
 
-    final knowListView = Container(
+    final knowListView = Container( // 知っている国に関するリストのコンテナ
       padding: EdgeInsets.only(top: 4.0, left: 4.0, right: 4.0),
-      child: _buildCategoryWidgets(knowCountryWidgetColumn),
+      child: _buildMakeCountryList(knowCountryWidgetColumn), // リスト本体
     );
 
-    final unKnowListView = Container(
+    final unKnowListView = Container( // 知っていない国に関するリストのコンテナ
       padding: EdgeInsets.only(top: 4.0, left: 4.0, right: 4.0),
-      child: _buildCategoryWidgets(unKnowCountryWidgetColumn),
+      child: _buildMakeCountryList(unKnowCountryWidgetColumn), // リスト本体
     );
 
-    return WillPopScope(
+    return WillPopScope( // 端末下の戻るボタンを押したときの処理
       onWillPop: () {
         Navigator.of(context)
           ..pop()
@@ -156,10 +152,10 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
         child: DefaultTabController(
         length: tabs.length,
           child: Scaffold(
-            appBar: AppBar(
+            appBar: AppBar( // アップバーの設置
               automaticallyImplyLeading: false,
               flexibleSpace: SafeArea(
-                child: TabBar(
+                child: TabBar( // タブバーの設置
                   labelColor: Colors.white,
                   indicatorColor: Colors.blueAccent,
                   labelStyle: TextStyle(
@@ -174,11 +170,11 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
   //                  borderRadius: BorderRadius.circular(30),
   //                ),
   //                indicatorSize: ,
-                  tabs: tabs,
+                  tabs: tabs, // tab本体の設定
                 ),
               ),
             ),
-            floatingActionButton: UnicornDialer(
+            floatingActionButton: UnicornDialer( // floatingActionButtonの設置
                 backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
                 parentButtonBackground: Colors.pink,
                 orientation: UnicornOrientation.VERTICAL,
@@ -188,7 +184,7 @@ class _TrainingResultState extends State<TrainingResult> with TickerProviderStat
                 childPadding: 5.0,
                 childButtons: childButtons),
 
-            body: TabBarView(children: [
+            body: TabBarView(children: [ // それぞれのタブで表示する内容を設置
               knowListView,
               unKnowListView,
             ]),

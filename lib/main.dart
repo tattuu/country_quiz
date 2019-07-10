@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations(
+  SystemChrome.setPreferredOrientations( // 縦画面固定
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
 } // エンドポイント(MyAppを実行する)
@@ -16,19 +16,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Locale myLocale;
+//    Locale myLocale; // 言語設定に関する情報を入れる変数
     return MaterialApp( // マテリアルアップウィジェットで、基礎を作る
-      localeResolutionCallback: (deviceLocale, supportedLocales) {
-        myLocale = deviceLocale;
-        print(myLocale.countryCode);
-        print(myLocale.languageCode);
-      },
-      localizationsDelegates: [
-        L10n.delegate,
+//      localeResolutionCallback: (deviceLocale, supportedLocales) { // 端末情報取得
+//        myLocale = deviceLocale; // 現在のデバイス設定情報を代入
+//        print(myLocale.countryCode); // 国コード
+//        print(myLocale.languageCode); // 言語コード
+//      },
+      localizationsDelegates: [ // ローカライズに関するデリゲート
+        L10n.delegate, // 独自設定した言語設定を適用
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: const [
+      supportedLocales: const [ // サポートする言語を指定
         Locale('ja'),
         Locale('en'),
       ],
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.orange[600], // AppBarの色
         fontFamily: 'Roboto', // フォント名
       ),
-      home: TopPage(),
+      home: TopPage(), // トップページの表示
     );
   }
 }

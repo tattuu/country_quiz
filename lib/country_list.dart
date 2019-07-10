@@ -61,7 +61,6 @@ class CountryListState extends State<CountryList> {
         categories.add(CreateOneCountryColumn(
           isoCode: countryFlagName.isoCode,
           name: countryFlagName.name,
-          color: Colors.grey[100],
           flagImagePath: CountryPickerUtils.getFlagImageAssetPath(
               countryFlagName.isoCode),
           //          units: units,
