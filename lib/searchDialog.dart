@@ -226,7 +226,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
       tagRadius = MediaQuery.of(context).size.width / 15;
       tagFontSize = 15.0;
     } else if (MediaQuery.of(context).size.width < 960) {
-      tagBorderSize = MediaQuery.of(context).size.width / 120;
+      tagBorderSize = MediaQuery.of(context).size.width / 280;
       tagRadius = MediaQuery.of(context).size.width / 20;
       tagFontSize = 20.0;
 
@@ -249,7 +249,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
                 ),
                 IconButton(
                     icon: Icon(Icons.done_outline),
-                    iconSize: MediaQuery.of(context).size.width / 10,
+                    iconSize: MediaQuery.of(context).size.width / 12,
                     onPressed: () {
                       if (searchResults.length != 0) {
                         setState(() {

@@ -189,16 +189,16 @@ class _TinderSwapCardState extends State<TinderSwapCard>
 
             _ratioOfPositionX = (details.globalPosition.dx - _tapPositionX) / MediaQuery.of(context).size.width;
 
-            print(_ratioOfPositionX);
+//            print(_ratioOfPositionX);
             if (_ratioOfPositionX > 0.1) {
-             print('Right');
+//             print('Right');
              setState(() {
                _opacityIndicator = _ratioOfPositionX - 0.1;
                _opacityIndicator = min(_opacityIndicator + _opacityIndicator/0.3, 1);
                _iconDisplayAlignment = Alignment.centerLeft;
              });
            } else if (_ratioOfPositionX < -0.1){
-             print('Left');
+//             print('Left');
              setState(() {
                _opacityIndicator = _ratioOfPositionX.abs() -0.1;
                _opacityIndicator = min(_opacityIndicator + _opacityIndicator/0.3, 1);
@@ -208,7 +208,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
 //            print(_opacityIndicator);
 
             if (widget.swipeUpdateCallback != null) {
-              print(details);
+//              print(details);
               widget.swipeUpdateCallback(details);
             }
           });

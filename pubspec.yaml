@@ -31,7 +31,7 @@ dependencies:
   intl_translation: ^0.17.5
   url_launcher: ^5.0.3
   photo_view: ^0.3.3
-
+  flutter_launcher_icons: ^0.7.2+1
 
 dev_dependencies:
   flutter_test:
@@ -41,7 +41,10 @@ dev_dependencies:
     sdk: flutter
 
 
-
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -75,6 +78,7 @@ flutter:
     - assets/json/country_list.json
     - assets/countries/flags/
     - assets/resultFace/
+
 #    - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
