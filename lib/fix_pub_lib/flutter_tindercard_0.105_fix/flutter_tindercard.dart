@@ -7,6 +7,7 @@ List<Size> _cardSizes = new List();
 List<Alignment> _cardAligns = new List();
 
 /// A Tinder-Like Widget.
+// ignore: must_be_immutable
 class TinderSwapCard extends StatefulWidget {
   List<Country> countryNames;
   List<Image> countryImageWidgets;
@@ -273,7 +274,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
     });
   }
 
-  Widget _frontMostCard(BuildContext context, int index) {
+  Widget _frontMostCard(BuildContext context, int index) { // 最前面のカード
 
     return GestureDetector(
       child: Stack(
@@ -295,10 +296,10 @@ class _TinderSwapCardState extends State<TinderSwapCard>
                   margin: EdgeInsets.only(left: 10, right: 10),
                   child: widget.countryImageWidgets[index],
                 ),
-                Spacer(),
+//                Spacer(),
                 Container(
-                  alignment: Alignment.center,
-                  padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 10, right: MediaQuery.of(context).size.width / 10),
+                  alignment: Alignment.topCenter,
+                  padding: EdgeInsets.only(top: 2, left: MediaQuery.of(context).size.width / 10, right: MediaQuery.of(context).size.width / 10),
                   child: Text(
                     _countryName,
                     style: TextStyle(

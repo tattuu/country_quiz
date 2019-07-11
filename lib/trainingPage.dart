@@ -55,9 +55,6 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
             child: Column(
     //          mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Container(
-                  height: 20,
-                ),
                 Stack( // Stackの形にして、Tinderカードを最前面にし、他のウィジェットと重なった時に、それ以外のウィジェットより上にカードを表示するようにする
                   children: <Widget>[
                     Container( // 現在までの表示国数の割合
@@ -119,7 +116,7 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
     );
   }
 
-  Widget _insideCard(int index) { // 表示させるカードを作成するメソッド
+  Widget _insideCard(int index) { // 表示させるカードを作成するメソッド(最前面以外の部分)
     return GestureDetector( // クリックイベントを実装するためのウィジェット
       child: Card(
         elevation: 4,
@@ -128,24 +125,24 @@ class _TrainingPageState extends State<TrainingPage> with TickerProviderStateMix
         ),
         color: Colors.grey[200],
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Container(
               height: 40,
             ),
-            Container( // 国旗表示部分
+            Container(
               alignment: Alignment.topCenter,
               height: MediaQuery.of(context).size.height/ 3,
               margin: EdgeInsets.only(left: 10, right: 10),
               child: _countryImageWidgetList[index],
             ),
-            Spacer(),
-            Container( // 国名表示部分
-              padding: EdgeInsets.only(left: 15, right: 15),
+//                Spacer(),
+            Container(
+              alignment: Alignment.topCenter,
+              padding: EdgeInsets.only(top: 2, left: MediaQuery.of(context).size.width / 10, right: MediaQuery.of(context).size.width / 10),
               child: Text(
                 '',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: MediaQuery.of(context).size.width / 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
