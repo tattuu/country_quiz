@@ -56,11 +56,11 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
   }
 
   Widget _oneTag(String tagName, int setNum) => // タグに関するウィジェット
-      Container(
+    GestureDetector(
+      child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(tagRadius),
           border: Border.all(
-//            width: MediaQuery.of(context).size.width / 120,
             width: tagBorderSize,
           color: _tagColor[setNum][tagName][0],
           ),
@@ -69,53 +69,52 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
         margin: EdgeInsets.only(left: 5.0),
         padding: EdgeInsets.all(7.0),
         child: Center(
-          child: GestureDetector(
-            onTap: () { // タグをタップした時
-              if (_selectedDialogCountry != null){ // 検索フォームで国が検索されている場合
-                _selectedDialogCountry = null; // 検索フォームの検索結果に対応した変数をリセットし、検索フォームで検索していない状態に戻す
-                searchResults.clear(); // 検索結果のリストをクリアし、何も検索されていない状態にするために、1度リセット
-                searchResults.add(tagName); // 空の検索結果リストにタップしたタグの名前を追加
-                setState(() {
-                  _listTileSet = Text( // 検索フォームに表示するオブジェクトを、検索をしていない状態のオブジェクトに戻す
-                    '${L10n.of(context).search}...',
-                    style: TextStyle(
-                      fontSize: tagFontSize * 1.2,
-                    ),
-                  );
-                });
-              } else { // 検索フォームで国が検索されていない場合
-                if (searchResults.length != 0) { // 何かのタグが既に押されていた場合
-                  var checkFlag = false; //  タップしたタグが既に押されていたかどうかをチェックするためのフラグ
-                  for (int i = 0; i < searchResults.length; i++) { // 既に押されているタグの数だけ回す
-                    if (searchResults[i] == tagName) { // タップしたタグを既にタップしていた場合
-                      searchResults.removeAt(i); // 検索結果からタップされたタグを消す
-                      checkFlag = true; // タップしたタグが、既に押されていた事を示す
-                    }
-                  }
-                  if (!checkFlag) { // タップしたタグが押されていなかった場合
-                    searchResults.add(tagName); // タップしたタグを追加
-                  }
-                } else { // 何も検索していなかった場合
-                  searchResults.add(tagName); // タップしたタグを追加
-                }
-              }
-
-              setState(() {
-                _tagColor[setNum][tagName][0] == Colors.black ? _tagColor[setNum][tagName][0] = Colors.white: _tagColor[setNum][tagName][0] = Colors.black; // タグの色を変更
-                _tagColor[setNum][tagName][1] == Colors.white ? _tagColor[setNum][tagName][1] = Colors.grey: _tagColor[setNum][tagName][1] = Colors.white; // タグの色を変更
-              });
-            },
-            child: Text( // タグに表示する名前に関するウィジェット
-              tagName,
-              style: TextStyle(
-                color: _tagColor[setNum][tagName][0],
-                fontWeight: FontWeight.w300,
-                fontSize: tagFontSize,
-              ),
+          child: Text( // タグに表示する名前に関するウィジェット
+            tagName,
+            style: TextStyle(
+              color: _tagColor[setNum][tagName][0],
+              fontWeight: FontWeight.w300,
+              fontSize: tagFontSize,
             ),
           ),
         ),
-      );
+      ),
+      onTap: () { // タグをタップした時
+        if (_selectedDialogCountry != null){ // 検索フォームで国が検索されている場合
+          _selectedDialogCountry = null; // 検索フォームの検索結果に対応した変数をリセットし、検索フォームで検索していない状態に戻す
+          searchResults.clear(); // 検索結果のリストをクリアし、何も検索されていない状態にするために、1度リセット
+          searchResults.add(tagName); // 空の検索結果リストにタップしたタグの名前を追加
+          setState(() {
+            _listTileSet = Text( // 検索フォームに表示するオブジェクトを、検索をしていない状態のオブジェクトに戻す
+              '${L10n.of(context).search}...',
+              style: TextStyle(
+                fontSize: tagFontSize * 1.2,
+              ),
+            );
+          });
+        } else { // 検索フォームで国が検索されていない場合
+          if (searchResults.length != 0) { // 何かのタグが既に押されていた場合
+            var checkFlag = false; //  タップしたタグが既に押されていたかどうかをチェックするためのフラグ
+            for (int i = 0; i < searchResults.length; i++) { // 既に押されているタグの数だけ回す
+              if (searchResults[i] == tagName) { // タップしたタグを既にタップしていた場合
+                searchResults.removeAt(i); // 検索結果からタップされたタグを消す
+                checkFlag = true; // タップしたタグが、既に押されていた事を示す
+              }
+            }
+            if (!checkFlag) { // タップしたタグが押されていなかった場合
+              searchResults.add(tagName); // タップしたタグを追加
+            }
+          } else { // 何も検索していなかった場合
+            searchResults.add(tagName); // タップしたタグを追加
+          }
+        }
+
+        setState(() {
+          _tagColor[setNum][tagName][0] == Colors.black ? _tagColor[setNum][tagName][0] = Colors.white: _tagColor[setNum][tagName][0] = Colors.black; // タグの色を変更
+          _tagColor[setNum][tagName][1] == Colors.white ? _tagColor[setNum][tagName][1] = Colors.grey: _tagColor[setNum][tagName][1] = Colors.white; // タグの色を変更
+        });
+      },
+    );
 
   void _openCountryPickerDialog() async => // 検索ダイアログ内の検索フォームが押された時に表示されるダイアログに関するメソッド
     await showDialog(
