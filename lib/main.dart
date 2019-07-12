@@ -4,6 +4,7 @@ import 'package:country_quiz/top_page.dart'; // トップページをインポ�
 import 'package:country_quiz/l10n/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/services.dart';
+import 'package:country_quiz/country_list.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations( // 縦画面固定
@@ -39,7 +40,11 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.orange[600], // AppBarの色
         fontFamily: 'Roboto', // フォント名
       ),
-      home: TopPage(), // トップページの表示
+      home: TopPage(),
+      routes: <String, WidgetBuilder>{
+        '/myapp': (BuildContext context) => TopPage(),
+        '/country_list': (BuildContext context) => CountryList(),
+      },// トップページの表示
     );
   }
 }

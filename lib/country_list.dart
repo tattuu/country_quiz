@@ -11,6 +11,7 @@ import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/typedef
 import 'package:country_quiz/fix_pub_lib/country_pickers_1.1.0_fix/utils/utils.dart';
 import 'package:country_quiz/searchDialog.dart';
 import 'package:country_quiz/l10n/l10n.dart';
+import 'package:country_quiz/searchResult.dart';
 
 class CountryList extends StatefulWidget {
 
@@ -24,7 +25,7 @@ class CountryListState extends State<CountryList> {
 //  var indicator = GlobalKey<RefreshIndicatorState>();
 //   _CountryListState({Key indicator});
   ScrollController _scrollController;
-  TextEditingController controller;
+//  TextEditingController controller;
 
 //  StreamController<CreateOneCountryColumn> _controller = StreamController<CreateOneCountryColumn>();
 
@@ -75,15 +76,20 @@ class CountryListState extends State<CountryList> {
     super.dispose();
   }
 
-  _scrollToTop() {
-    _scrollController.animateTo(
-        _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1),
-        curve: Curves.easeIn);
-  }
+//  _scrollToTop() {
+//    if (_scrollController.position.pixels < 8000.0) {
+//      _scrollController.jumpTo(_scrollController.position.minScrollExtent);
+//      print(_scrollController.position.maxScrollExtent / 2);
+//    } else {
+//      _scrollController.animateTo(_scrollController.position.minScrollExtent,
+//          duration: Duration(milliseconds: 10000),
+//          curve: Curves.easeIn);
+//    }
+//  }
 
   Widget _buildCategoryWidgets(List<Widget> categories) {
     return ListView.builder(
+      shrinkWrap: true,
       controller: _scrollController,
       itemBuilder: (BuildContext context, int index) => categories[index],
       itemCount: categories.length,
@@ -105,7 +111,7 @@ class CountryListState extends State<CountryList> {
           size: 36,
         ),
         onPressed: () async {
-          var keepCountryFlagNames = countryFlagNames;
+//          var keepCountryFlagNames = countryFlagNames;
           countryFlagNames = await showDialog(
             context: context,
             barrierDismissible: true,
@@ -114,11 +120,13 @@ class CountryListState extends State<CountryList> {
             },
           );
           setState(() {
-            if (countryFlagNames == null){
-              countryFlagNames = keepCountryFlagNames;
+            if (countryFlagNames != null){
+              Navigator.of(context).push(MaterialPageRoute( // 指定した画面関連ウィジェットに遷移する
+                builder: (BuildContext context) {
+                  return SearchResult(searchResult: countryFlagNames);
+                },
+              ));
             }
-            _scrollToTop();
-            retrieveCountryList();
           });
         },
       ),
@@ -134,9 +142,11 @@ class CountryListState extends State<CountryList> {
           size: 40,
         ),
         onPressed: () {
-          _scrollToTop();
-          countryFlagNames = countryList(context).where(acceptAllCountries).toList();
-          retrieveCountryList();
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (_) => CountryList()));
+//          _scrollToTop();
+//          countryFlagNames = countryList(context).where(acceptAllCountries).toList();
+//          retrieveCountryList();
         },
       ),
     ));
@@ -151,7 +161,7 @@ class CountryListState extends State<CountryList> {
           size: 47,
         ),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context).pop();
         },
       ),
     ));

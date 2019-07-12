@@ -62,9 +62,9 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
           borderRadius: BorderRadius.circular(tagRadius),
           border: Border.all(
             width: tagBorderSize,
-          color: _tagColor[setNum][tagName][0],
+            color: Colors.grey,
           ),
-          color: _tagColor[setNum][tagName][1],
+          color: _tagColor[setNum][tagName][1], // 初めは白
         ),
         margin: EdgeInsets.only(left: 5.0),
         padding: EdgeInsets.all(7.0),
@@ -283,5 +283,4 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
       ],
     );
   }
-
 }

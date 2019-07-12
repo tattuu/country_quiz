@@ -78,10 +78,14 @@ class _ChallengeResultState extends State<ChallengeResult> with TickerProviderSt
   }
 
   _scrollToTop() { // リストの先頭に移動する
-    _scrollController.animateTo(
-        _scrollController.position.minScrollExtent,
-        duration: Duration(milliseconds: 1), // 1ミリ秒で先頭に移動
-        curve: Curves.easeIn); // easeInの形式で移動
+    if (_scrollController.position.pixels < 8000.0) {
+      _scrollController.jumpTo(_scrollController.position.minScrollExtent);
+      print(_scrollController.position.maxScrollExtent / 2);
+    } else {
+      _scrollController.animateTo(_scrollController.position.minScrollExtent,
+          duration: Duration(milliseconds: 10000),
+          curve: Curves.easeIn);
+    }
   }
 
   Widget _buildMakeCountryList(List<Widget> countriesColumnList) { // ListViewにする1列の要素が入ったリストから、ListViewを作成する
