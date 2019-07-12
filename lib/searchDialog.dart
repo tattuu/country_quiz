@@ -223,7 +223,7 @@ class _MainSearchDialog extends State<MainSearchDialog>{ // サーチダイア�
     if (MediaQuery.of(context).size.width < 480) {
       tagBorderSize = MediaQuery.of(context).size.width / 180;
       tagRadius = MediaQuery.of(context).size.width / 15;
-      tagFontSize = 15.0;
+      tagFontSize = 13.0;
     } else if (MediaQuery.of(context).size.width < 960) {
       tagBorderSize = MediaQuery.of(context).size.width / 280;
       tagRadius = MediaQuery.of(context).size.width / 20;

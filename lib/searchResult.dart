@@ -75,7 +75,9 @@ class SearchResultState extends State<SearchResult> {
 
     return WillPopScope( // 端末下の戻るボタンを押したときの処理
       onWillPop: () {
-        Navigator.of(context).pop();
+        Navigator.of(context)
+          ..pop()
+          ..pop();
       },
       child: SafeArea(
         child: Scaffold(
